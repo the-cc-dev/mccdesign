@@ -1,0 +1,138 @@
+// display & position
+@mixin dp($d,$p) {
+    display: $d;
+    position: $p;
+}
+
+// bottom & left
+@mixin bl($b,$l) {
+    bottom: $b;
+    left: $l;
+}
+// bottom & right
+@mixin br($b,$r) {
+    bottom: $b;
+    right: $r;
+}
+// top & left
+@mixin tl($t,$l) {
+    top: $t;
+    left: $l;
+}
+// top & right
+@mixin tr($t,$r) {
+    top: $t;
+    right: $r;
+}
+
+// margin & padding
+@mixin mp($m,$p) {
+    margin: $m;
+    padding: $p;
+}
+
+// min & max width
+@mixin mmw($min,$max) {
+    min-width: $min;
+    max-width: $max;
+}
+// min & max height
+@mixin mmh($min,$max) {
+    min-height: $min;
+    max-height: $max;
+}
+// width & height
+@mixin wh($w,$h) {
+    width: $w;
+    height: $h;
+}
+
+//display & position
+    //bottom & left
+@mixin dpbl($d,$p,$b,$l) {
+    @include dp($d,$p);
+    @include bl($b,$l);
+}
+    //bottom & right
+@mixin dpbr($d,$p,$b,$r) {
+    @include dp($d,$p);
+    @include br($b,$r);
+}
+    //top & left
+@mixin dptl($d,$p,$t,$l) {
+    @include dp($d,$p);
+    @include tl($t,$l);
+}
+    //top & right
+@mixin dptr($d,$p,$t,$r) {
+    @include dp($d,$p);
+    @include tr($t,$r);
+}
+
+//dimensions, margins, & padding
+@mixin whmp($w,$h,$m,$p) {
+    @include wh($w,$h);
+    @include mp($m,$p);
+}
+
+
+
+@mixin colors($c,$tdc,$bgc,$bc,$crc,$o,$bs) {
+    color: $c;
+    text-decoration-color: $tdc;
+    background-color: $bgc;
+    border-color: $bc;
+    column-rule-color: $crc;
+    opacity: $o;
+    box-shadow: $bs;
+}
+
+//fill parent element
+@mixin fill() {
+    @include dp(inline-block,relative);
+    @include tl(0,0);
+    @include wh(100%,100%);
+    @include mp(0,0);
+}
+
+@mixin font($f,$ls) {
+    direction: ltr;
+    font: $f;
+    font-size-adjust: none;
+    font-stretch: normal;
+    letter-spacing: $ls;
+    vertical-align: middle;
+}
+@mixin text($c,$ta,$td,$ti,$tj,$to,$ts,$tt,$wb,$ws) {
+    color: $c;
+    text-align: $ta;
+    text-decoration: $td;
+    text-indent: $ti;
+    text-justify: $tj;
+    text-overflow: $to;
+    text-shadow: $ts;
+    text-transform: $tt;
+    word-break: $wb;
+    word-spacing: $ws;
+}
+/*
+@mixin gfont($font-name) {
+    @font-face {
+        font-family: ;
+        src: ;
+        font-weight: ;
+        font-style: ;
+    }
+}
+*/
+// footer-bottom height = proportionate height based on 
+// $footer-gate-ratio & $footer-gates
+@mixin footerBottomGates($number-of-gates) {
+    height: ($footer-gate-ratio/$number-of-gates) * $footer-width; 
+}
+/*
+@mixin ($,$) {
+    : $;
+    : $;
+}
+*/

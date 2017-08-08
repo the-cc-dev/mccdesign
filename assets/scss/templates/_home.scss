@@ -1,0 +1,117 @@
+.home {
+		.the-header {
+				
+			.search-toggle {
+				@media only screen and (max-width: 767px) {
+					display: none;
+				}
+			}
+		}// </.the-header>
+		.the-main {
+
+			.container-fluid {
+
+				.page-title { 
+						margin-top: 30px;  
+				}
+				.browse-drop {
+						@include dp(inline-block,relative);
+						@include wh(100%,auto);
+
+						text-align: center;
+
+					.browse-toggle { 
+							@include dp(inline-block,relative);
+						
+							margin-top: 20px; 
+					}
+					.browse-menu {
+							@include dp(inline-block,fixed);
+							@include tl(300px,25%);
+							@include mp(0,0);
+							@include wh(50%,auto);
+						.browse-item {
+							.browse-link {}
+						}
+					}
+					@media only screen and (min-width: $xs2-min-width) {
+						.browse-toggle {
+							margin-top: 0px;
+						}
+						.browse-menu {
+							margin-top: 5px;
+								.browse-item {
+										.browse-link {}
+								}
+						}
+					}
+					@media only screen and (min-width: $xs3-min-width) {
+						.browse-toggle {
+							margin-top: 20px;
+						}
+						.browse-menu {
+							margin-top: 0px;
+								.browse-item {
+										.browse-link {}
+								}
+						}
+					}
+				} // </.browse-drop>
+				.galleries-slider {display: none;}
+			}// </.container-fluid>
+		}// </.the-main>
+		.the-footer {
+			
+		}// </.the-footer>
+}// </body>
+@media only screen and (min-width: $sm-min-width) {
+	body.home {
+		.body-container {
+			.the-header {}
+			.the-main {
+				.container-fluid {
+					.page-title {}
+					.browse-drop {}
+					.galleries-slider {
+						@include dp(inline-block,fixed);
+					}
+				}
+			}
+			.the-footer {}
+		}
+	}
+}
+@media only screen and (min-width: $md-min-width) {
+	body.home {
+		.body-container {
+			.the-header {}
+			.the-main {
+				.container-fluid {
+					.page-title {}
+					.browse-drop {
+						.browse-toggle {}
+						.browse-menu { .browse-item { .browse-link {} } }
+					}
+				}
+			}
+			.the-footer {}
+		}
+	}
+}
+@media only screen and (min-width: $lg-min-width) {
+	body.home {
+		.body-container {
+			.the-header {}
+			.the-main {
+				.container-fluid {
+					.page-title {}
+					.browse-drop {
+						.browse-toggle {}
+						.browse-menu { .browse-item { .browse-link {} } }
+					}
+				}
+			}
+			.the-footer {}
+		}
+	}
+}

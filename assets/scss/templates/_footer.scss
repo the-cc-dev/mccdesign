@@ -1,0 +1,60 @@
+.the-footer {
+    @include dp(inline-block,$displays);
+    @include mp(0,0);
+    @include bl(0,0);
+    @include wh(100%,auto);
+
+    z-index: 1;
+
+    .footer-bottom {
+        @include dp(inline-block,relative);
+        @include bl(0,0);
+
+        width: $footer-width;
+        @include footerBottomGates($footer-gates-xs);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+}
+@media only screen and (min-width: $xs2-min-width) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates($footer-gates-xs2);
+        }
+    }
+}
+@media only screen and (min-width: $xs3-min-width) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates($footer-gates-xs3);
+        }
+    }
+}
+@media only screen and (min-width: $sm-min-width) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates($footer-gates-sm);
+        }
+    }
+}
+@media only screen and (min-width: 769px) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates(4);
+        }
+    }
+}
+@media only screen and (min-width: $md-min-width) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates($footer-gates-md);
+        }
+    }
+}
+@media only screen and (min-width: $lg-min-width) {
+    .the-footer {
+        .footer-bottom {
+            @include footerBottomGates($footer-gates-lg);
+        }
+    }
+}

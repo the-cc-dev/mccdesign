@@ -1,0 +1,21 @@
+.the-main {
+    @include dp(inline-block,$displays);
+    @include mp(0,0);
+    @include tl(50px,0);
+    @include wh(100%,auto);
+
+    z-index: 10;
+    min-height: 100px;
+}
+@media only screen and (min-width: $xs2-min-width) {
+    .the-main {
+        .page-title {
+            padding: 15px;
+        }
+    }
+}
+@media only screen and (min-width: $xs3-min-width) {
+    .the-main {
+        .page-title {}
+    }
+}

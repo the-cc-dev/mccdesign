@@ -1,0 +1,62 @@
+/* FONTS */
+    //sans
+    $sans-font: 'Alegreya Sans', sans-serif;
+    //serif
+    $serif-font: 'Merriweather', serif;
+
+/* COLORS */
+    $primary-dark-color: black;
+    $primary-light-color: white;
+
+/* BREAKPOINTS */
+    $xs-min-width: 320px;
+    $xs2-min-width: 375px;
+    $xs3-min-width: 425px;
+    $sm-min-width: 768px;
+    $md-min-width: 1024px;
+    $lg-min-width: 1440px;
+
+/* body { */
+
+    $body-bg-color: $primary-dark-color;
+    $body-font: 15px $serif-font;
+
+    //header, main, && footer displays (fixed or relative)
+    $displays: fixed;
+
+    //h1-6 font
+    $h-font: $sans-font;
+/* } */
+
+/* .the-header { */
+    //font/icon/border color
+    $header-color: $primary-light-color;
+    //background color
+    $header-bg-color: transparent;
+    //height
+    $header-height: 50px;
+		//font-size
+		$header-font-size: 20px;
+/* } */
+
+/* .the-main { */
+    //.page-title: font-size
+    $page-title-font-size: 50px;
+/* } */
+
+/* .the-footer { */
+    // height:width ratio of gate image
+    $footer-gate-ratio: .90798;
+    // width = 100% of device width
+    $footer-width: 100vw;
+    // number of gates on phones
+    $footer-gates-xs: 2;
+    $footer-gates-xs2: 2;
+    $footer-gates-xs3: 2;
+    // number of gates on tablets
+    $footer-gates-sm: 2.99;
+    // number of gates on laptops
+    $footer-gates-md: 4.98;
+    $footer-gates-lg: 6.95;
+    
+/* } */
