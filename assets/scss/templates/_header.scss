@@ -34,9 +34,9 @@ z-index: 100;
                 border-radius: 5px;
                 cursor: pointer;
 
-                .fa-bars { 
+                .fa-bars {
                     font-size: 20px;
-                    color: $header-color; 
+                    color: $header-color;
                 }
             }
             .navbar-toggle:hover {
@@ -117,7 +117,7 @@ z-index: 100;
                     @include dp(inline-block,relative);
 
                     h3 { display: none; }
-                }   
+                }
                 .widget_nav_menu {
                     @include dp(inline-block,relative);
                     @include wh(100%,200px);
@@ -130,7 +130,7 @@ z-index: 100;
                         .menu {
                             @include mp(0,0);
                             @include dp(inline-block,relative);
-                            
+
                             list-style: none;
 
                             .menu-item {
@@ -185,7 +185,12 @@ z-index: 100;
                 }
             }
         }
-        .collapse.in, .collapsing { @include dp(inline-block,relative); } 
+        .collapse.in, .collapsing { @include dp(inline-block,relative); }
+        .search-toggle {
+          @media (max-width: ($sm-min-width - 1px)) {
+            display: none;
+          }
+        }
         .header-bottom {
             @include dp(inline-block,$displays);
             @include wh(100%, auto);
@@ -200,44 +205,44 @@ z-index: 100;
                 z-index: 11;
             }
           @media only screen and (min-width: $xs2-min-width) {
-            .header-img {  @include wh(80px,80px); }   
+            .header-img {  @include wh(80px,80px); }
           }
           @media only screen and (min-width: $xs3-min-width) {
-            .header-img { @include wh(90px,90px); }   
+            .header-img { @include wh(90px,90px); }
           }
           @media only screen and (min-width: $sm-min-width) {
-            .header-img { @include wh(100px,100px); }   
+            .header-img { @include wh(100px,100px); }
           }
           @media only screen and (min-width: $md-min-width) {
-            .header-img { @include wh(110px,110px); }   
+            .header-img { @include wh(110px,110px); }
           }
           @media only screen and (min-width: $lg-min-width) {
-            .header-img { @include wh(120px,120px); }   
+            .header-img { @include wh(120px,120px); }
           }
         }
     }
 }
 @media only screen and (min-width: $sm-min-width) {
-	
+
 	.the-header {
 			border-bottom: 1px solid white;
-		
+
 		.the-navbar {
 				@include dp(inline-block,relative);
 				@include wh(100%,50px);
-				
+
 			.navbar-header {
 					@include dp(inline-block,relative);
-						
+
 					max-width: 30%;
 					border-width: 0px;
 				.navbar-brand {
-					
+
 				}
-				.navbar-toggle { 
+				.navbar-toggle {
 					.fa-bars {
-							
-					} 
+
+					}
 				}
 			}
 			.navbar-body {
@@ -280,12 +285,12 @@ z-index: 100;
 							}
 						}
 					}
-					.widget { 
+					.widget {
 							@include dp(inline-block,relative);
 							@include mp(0,0);
 							@include wh(auto,50px);
 
-						.h3 {} 
+						.h3 {}
 					}
 						.widget_nav_menu {
 
@@ -293,21 +298,21 @@ z-index: 100;
 
 								.menu {
 
-									.menu-item { 
+									.menu-item {
 											@include dp(inline-block,relative);
 											@include wh(auto,50px);
 											@include mp(0,7.5px);
-										
+
 											float: left;
 
-										a { 
+										a {
 												@include mp(0,3px);
 												@include wh(auto, 35px);
-											
+
 												font-size: $header-font-size;
 												border-radius: 4px;
 												text-shadow: 1px 1px black;
-										} 
+										}
 									}
 									.menu-item:hover {
 										a {
@@ -315,13 +320,13 @@ z-index: 100;
 										}
 									}
 								}
-							} 
+							}
 						}
 						.widget_search {
 
 							.search-form-container {
 								position: fixed;
-								@include tr(0,70px);
+								@include tr(0,50px);
 								z-index: 100;
 								width: 465px;
 								.search-form {
@@ -331,10 +336,10 @@ z-index: 100;
 										.search-field {
 										}
 										.input-group-btn {
-											
+
 											.search-submit {
 												background-color: gray;
-											} 
+											}
 										}
 									}
 								}
@@ -345,22 +350,21 @@ z-index: 100;
 						}
 				}
 				.collapse.in, .collapsing {
-					
+
 				}
 			}
 			.search-toggle {
-					@include dp(inline-block,relative);
+					@include dptr(inline-block,fixed, 0, 0);
 					@include mp(0,7.5px);
 					@include wh(50px,50px);
-					
-					float: left;
+
 				.btn {
 						@include mp(0,5px);
 						@include wh(35px,35px);
-						
+
 						background-color: transparent;
 						border-width: 0px;
-					
+
 					.fa-search {
 						  color: white;
 							text-shadow: 1px 1px black;
@@ -418,7 +422,7 @@ z-index: 100;
 										.nav {
 											.menu-item { a {} }
 										}
-									} 
+									}
 								}
 								.widget_search {
 									.search-form-container {
@@ -433,6 +437,10 @@ z-index: 100;
 						}
 						.collapse.in, .collapsing {}
 					}
+          .search-toggle {
+            @include dptr(inline-block, fixed, 0px, 0px);
+
+          }
 					.header-bottom {
 						.header-img {}
 					}
@@ -462,7 +470,7 @@ z-index: 100;
 										.nav {
 											.menu-item { a {} }
 										}
-									} 
+									}
 								}
 								.widget_search {
 									.search-form-container {
@@ -506,7 +514,7 @@ z-index: 100;
 										.nav {
 											.menu-item { a {} }
 										}
-									} 
+									}
 								}
 								.widget_search {
 									.search-form-container {

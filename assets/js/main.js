@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     //dropdown menus
     $('ul.drop-menu').hide();
     $('i.drop-down').hide();
@@ -10,10 +10,10 @@ $(document).ready(function(){
 			$(this).children('i.drop-up').toggle();
 			console.log('drop-toggle button was clicked.');
     });
-	
+
 		// the search toggle
-	  
-	
+
+
 		$('div.search-toggle').click(function() {
 			$('div.seach-form-container').toggleClass('open');
 			$(this).toggleClass('open');
@@ -21,10 +21,10 @@ $(document).ready(function(){
 			$('div.search-toggle button.btn i.fa').toggleClass('fa-times');
 			$('div.search-form-container').slideToggle();
 		});
-	
+
 		//gallery carousel setup
-		
-		 $('.responsive').slick({
+
+		 $('.responsive-slider').slick({
 			 dots: true,
 			 autoplay: true,
 			 mobileFirst: true,
@@ -37,12 +37,12 @@ $(document).ready(function(){
 					 settings: "unslick"
 				 }]
 		 });
-	
+
 		$('.slick-arrow').html('<i class="fa"></i>');
 		$('.slick-prev .fa').addClass('fa-chevron-circle-left');
 		$('.slick-next .fa').addClass('fa-chevron-circle-right');
-	
-    
+
+
     console.log('document is ready.');
-    
+
 });

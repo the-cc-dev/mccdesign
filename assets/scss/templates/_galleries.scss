@@ -35,31 +35,15 @@
 					.gallery-slider {
 						z-index: 30;
 						margin-top: 5px;
-						.slick-arrow {
-							display: none!important;
-							.fa {
-								color: white;
-								font-size: $header-font-size;
-							}
-						}
-						.slick-prev {}
-						.slick-next {}
-						.slick-dots {
-							display: none!important;
-						}
-						.slick-list {
-							.slick-track {
-								.gallery-item {
-									.gallery-img {
-										width: 100%;
-										max-height: 275px;
-									}
-								}
+						.gallery-item {
+							.gallery-img {
+								width: 100%;
+								max-height: 275px;
 							}
 						}
 					}
 				}
-			
+
 		}
 		.the-footer {
 			z-index: 50;
@@ -133,10 +117,19 @@
 				}
 			}
 			.the-main {
-				padding: 0;
+				padding: 0px;
+				height: 65%;
+				overflow: hidden;
 				.galleries {
+					@include dp(inline-block,relative);
+					@include wh(120%,120%);
+					left: -10%;
+					overflow:scroll;
+					padding: 1% 18%;;
 					.page-title {}
-					.browse-drop {}
+					.browse-drop {
+						.browse-menu {}
+					}
 					.gallery-slider {
 						.gallery-item {
 							width: 30%;
