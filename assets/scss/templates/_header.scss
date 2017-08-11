@@ -187,9 +187,7 @@ z-index: 100;
         }
         .collapse.in, .collapsing { @include dp(inline-block,relative); }
         .search-toggle {
-          @media (max-width: ($sm-min-width - 1px)) {
-            display: none;
-          }
+          @media (max-width: ($sm-min-width - 1px)) {display: none;}
         }
         .header-bottom {
             @include dp(inline-block,$displays);
