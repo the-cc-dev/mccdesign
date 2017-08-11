@@ -1,5 +1,3 @@
-//var = require('');
-var babel 			= require('gulp-babel');
 var browserSync = require('browser-sync');
 var cache       = require('gulp-cache');
 var concat      = require('gulp-concat');
@@ -12,7 +10,6 @@ var merge       = require('gulp-merge');
 var minifyCss   = require('gulp-cssnano');
 var minifyJs    = require('gulp-uglify');
 var plumber     = require('gulp-plumber');
-var react				= require('gulp-react');
 var rename      = require('gulp-rename');
 var runSequence = require('run-sequence');
 var sass        = require('gulp-sass');
@@ -24,7 +21,7 @@ var path        = manifest.paths,
     config      = manifest.config || {},
     globs       = manifest.globs,
     project     = manifest.getProjectGlobs(),
-    
+
     assets      = {
          fonts: path.source + "fonts/",
         images: path.source + "images/",
@@ -37,7 +34,7 @@ var path        = manifest.paths,
          fonts: path.dist + "fonts/",
         images: path.dist + "images/",
        scripts: path.dist + "javascripts/",
-        styles: path.dist + "stylesheets/"                                     
+        styles: path.dist + "stylesheets/"
     },
     bwr = "bower.json",
     man = path.source + "manifest.json",
@@ -70,10 +67,10 @@ gulp.task('clean', require('del').bind(null, [
 gulp.task('images', function() {
   return gulp.src(globs.images)
     .pipe(plumber({errorHandler: onError}))
-    .pipe(cache(imagemin({ 
-      optimizationLevel: 3, 
-      progressive: true, 
-      interlaced: true 
+    .pipe(cache(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
     })))
     .pipe(gulp.dest(dist.images))
     .pipe(browserSync.stream());
@@ -123,20 +120,6 @@ gulp.task('bower-js', function() {
     .pipe(gulp.dest(assets.js));
 });
 
-// ### Babel-JS
-/*
-
-*/
-gulp.task('react-js', function() {
-	gulp.src(assets.jsx)
-		.pipe(plumber({errorHandler: onError}))
-		.pipe(concat('react.jsx'))
-		.pipe(react({harmony: false, es6module: true}))
-		.pipe(rename('reacts.js'))
-		.pipe(babel())
-		.pipe(gulp.dest(assets.js));
-});
-
 // ### Styles
 /*
     `gulp styles` - Compiles & optimizes project CSS & Bower CSS
@@ -157,10 +140,9 @@ gulp.task('styles', ['bower-scss'], function() {
 /*
     `gulp scripts` - Compiles, combines, & optimizes project JS & Bower JS
 */
-gulp.task('scripts', ['bower-js'/*,'react-js'*/], function() {
+gulp.task('scripts', ['bower-js'], function() {
   return merge(
 		gulp.src(assets.js + "external.js"),
-		//gulp.src(assets.js + "reacts.js"),
 		gulp.src(assets.js + "main.js")
 	)
     .pipe(plumber({errorHandler: onError}))
@@ -174,7 +156,7 @@ gulp.task('scripts', ['bower-js'/*,'react-js'*/], function() {
 
 //  ### Build
 /*
-    `gulp build` - Run all the build tasks but don't clean up beforehand. 
+    `gulp build` - Run all the build tasks but don't clean up beforehand.
     Generally you should be running `gulp` instead of `gulp build`.
 */
 gulp.task('build', function(callback) {
@@ -184,12 +166,12 @@ gulp.task('build', function(callback) {
 });
 
 // ### Watch
-/*  
-    `gulp watch` - Use BrowserSync to proxy your dev server and synchronize 
-    code changes across devices. Specify the hostname of your dev server at 
-    `manifest.config.devUrl`. When a modification is made to an asset, run the 
-    build step for that asset and inject the changes into the page. See: 
-    http://www.browsersync.io 
+/*
+    `gulp watch` - Use BrowserSync to proxy your dev server and synchronize
+    code changes across devices. Specify the hostname of your dev server at
+    `manifest.config.devUrl`. When a modification is made to an asset, run the
+    build step for that asset and inject the changes into the page. See:
+    http://www.browsersync.io
 */
 gulp.task('watch', function() {
   browserSync.init({
@@ -208,9 +190,9 @@ gulp.task('watch', function() {
 });
 
 // ### Gulp
-/*  
-    `gulp` - Run a complete build. 
-    To compile for production run `gulp --production`. 
+/*
+    `gulp` - Run a complete build.
+    To compile for production run `gulp --production`.
 */
 gulp.task('default', ['clean'], function() {
     gulp.start('build');

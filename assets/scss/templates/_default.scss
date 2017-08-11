@@ -1,0 +1,33 @@
+body {
+  	@include dptl(block,absolute,0,0);
+  	@include whmp(100vw,100vh,0,0);
+    @extend .serif;
+
+  	background: $primary-dark-color;
+
+	.body-container {
+  		@include fill();
+
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    @import "parts/header";
+
+    .the-main {
+      @include dptl(inline-block,fixed,0,0);
+      @include whmp(100%,auto,$header-height 0 0,0 0 $header-height);
+
+      overflow:hidden;
+
+      .container-fluid {
+          @include dptl(inline-block,relative,0,0);
+          @include wh(115%,105%,0 0 0 -7.5%,0);
+
+          overflow: scroll;
+      }
+    }
+
+    @import "parts/footer";
+  }
+}

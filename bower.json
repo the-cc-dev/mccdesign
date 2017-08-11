@@ -25,7 +25,7 @@
   "dependencies": {
     "font-awesome": "latest",
     "bootstrap-sass": "latest",
-    "slick-carousel": "^1.7.1"
+    "slick-carousel": "latest"
   },
   "overrides": {
     "font-awesome": {

@@ -5,13 +5,9 @@
   "author": "the-cc-dev <the.cc.dev@gmail.com>",
   "private": true,
   "scripts": {},
-  "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "asset-builder": "^1.1.0",
-    "babel-core": "^6.25.0",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -25,15 +21,10 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-merge": "^0.1.1",
     "gulp-plumber": "^1.1.0",
-    "gulp-react": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-wiredep": "^1.2.0",
-    "react": "^15.6.1",
-    "react-slick": "^0.14.11",
-    "react-swipeable": "^4.1.0",
-    "reactify": "^1.1.1",
     "run-sequence": "^2.1.0"
   }
 }

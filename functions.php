@@ -2,12 +2,11 @@
 
 $theme_name = 'mccdesign';
 
-
 /**
  * Theme setup
  */
 function the_setup() {
-    
+
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
@@ -62,7 +61,7 @@ add_action('widgets_init', 'the_widgets_init');
  * ACF Options Page
  **/
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title' 	=> 'Options',
 		'menu_title'	=> 'Options',
@@ -77,7 +76,7 @@ if( function_exists('acf_add_options_page') ) {
  */
 
 function the_enqueue() {
-	/* local paths */ 
+	/* local paths */
 	$dist_path = '/wp-content/themes/' . 'mccdesign' . '/dist/';
 		$styles = $dist_path . 'stylesheets/styles.min.css';
 		$scripts = $dist_path . 'javascripts/scripts.min.js';
@@ -87,5 +86,5 @@ function the_enqueue() {
 	wp_enqueue_style('styles', $styles);
 }
 add_action('wp_enqueue_scripts', 'the_enqueue');
- 
+
 ?>

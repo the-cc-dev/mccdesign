@@ -1,97 +1,69 @@
 .page {
   .body-container {
-    .the-header {
-      z-index: 70;
-    }
     .the-main {
-      height: 65%;
-      padding: 0 10px;
-      overflow:hidden;
-      z-index: 50;
-      .container-fluid {
-        @include dp(inline-block,relative);
-        @include wh(115%,105%);
-        margin-left: -7.5%;
-        overflow: scroll;
+      .page-title {}
+      .the-content {
+          @include dptl(inline-block,relative,0,0);
+          @include whmp(100%,auto,15px 2%,0);
 
-        .page-title {
+        .content-text {
+            @include dptl(inline-block,relative,0,0);
+            @include whmp(100%,100%,0 0 $header-height,20px);
 
-        }
-        .the-content {
-          @include dp(inline-block,relative);
-          margin: 15px 2%;
-
-          .content-text {
-            @include dp(inline-block,relative);
-            @include wh(100%,100%);
-            margin-bottom: 50px;
-            border: 1px solid black;
-            border-radius: 6px;
-            background-color: white;
-            padding: 20px;
-          }
+            background-color: $primary-light-color;
+            border: 1px solid $primary-dark-color;
+            border-radius: $border-radii;
         }
       }
-    }
-    .the-footer {
-      z-index: 60;
     }
   }
 }
+
 @media (min-width: $xs2-min-width) {
   .page {
     .body-container {
-      .the-header {}
       .the-main {
         .container-fluid {
-          .page-title {}
-          .the-content {}
+          .page-title { padding: 15px; }
+          .the-content {
+            .content-text {}
+          }
         }
       }
-      .the-footer {}
     }
   }
 }
 @media (min-width: $xs3-min-width) {
   .page {
     .body-container {
-      .the-header {}
       .the-main {
         .container-fluid {
           .page-title {}
-          .the-content {}
+          .the-content {
+            .content-text {}
+          }
         }
       }
-      .the-footer {}
     }
   }
 }
 @media (min-width: $sm-min-width) {
   .page {
     .body-container {
-      .the-header {}
       .the-main {
-        @include fill();
-        padding-top: 25px;
-        .container-fluid {
           @include fill();
-          overflow: hidden;
-          .page-title {
-            font-size: 40px;
-          }
+          padding-top: 25px;
+        .container-fluid {
+            @include fill();
+            overflow: hidden;
+          .page-title {font-size: 40px;}
           .the-content {
-            padding: 0 25px;
-            font-size: 20px;
+              padding: 0 25px;
+              font-size: 20px;
             .content-text {
-              
-              padding: 20px;
+                padding: 20px;
             }
           }
-        }
-      }
-      .the-footer {
-        .footer-bottom {
-          @include footerBottomGates(4);
         }
       }
     }
@@ -100,28 +72,28 @@
 @media (min-width: $md-min-width) {
   .page {
     .body-container {
-      .the-header {}
       .the-main {
         .container-fluid {
           .page-title {}
-          .the-content {}
+          .the-content {
+            .content-text {}
+          }
         }
       }
-      .the-footer {}
     }
   }
 }
 @media (min-width: $lg-min-width) {
   .page {
     .body-container {
-      .the-header {}
       .the-main {
         .container-fluid {
           .page-title {}
-          .the-content {}
+          .the-content {
+            .content-text {}
+          }
         }
       }
-      .the-footer {}
     }
   }
 }

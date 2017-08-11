@@ -2,11 +2,11 @@
 	"dependencies": {
 		"fonts": {
 			"bower": ["font-awesome", "bootstrap-sass", "slick-carousel"]
-		},  
+		},
 		"external.js": {
 			"external": true,
 				 "bower": ["jquery", "bootstrap-sass", "slick-carousel"]
-		},   
+		},
 		"styles.css": {
 			"bower": ["bootstrap-sass", "font-awesome", "slick-carousel"],
 			"files": ["scss/main.scss"],
@@ -15,14 +15,14 @@
 		"scripts.js": {
 			"files": ["js/**/*.js"],
 			 "main": true
-		}  
-	},        
+		}
+	},
 	"paths": {
 		"source": 	"assets/",
 			"dist":		"dist/"
 	},
 	"config": {
 		 "devUrl":  "http://localhost:8888/metalwork",
-		"bwrPath": 	"bower_components/"  
+		"bwrPath": 	"bower_components/"
 	}
 }

@@ -1,106 +1,17 @@
 .sans { font-family: $sans-font; }
 .serif { font-family: $serif-font; }
+
 .page-title {
     @extend .sans;
 
     text-align: center;
-    font-size: 30px;
-    text-shadow: 1px 1px black;
-    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px $primary-dark-color;
+    color: $primary-light-color;
 }
+.entry-title {}
+.entry-summary {}
 
-.a-dropdown {
-    .drop-toggle {
-        @extend .sans;
-
-        font-size: 25px;
-        font-weight: 300;
-        border: 1px solid black;
-        background-color: white;
-
-        .drop-arrow { font-size: 15px; }
-    }
-    .drop-toggle:hover {
-        background-color: transparent;
-        color: white;
-        font-weight: 500;
-        text-shadow: 1px 1px black;
-        border: 1px solid white;
-    }
-    .drop-menu {
-
-        border-radius: 5px;
-        font-size: 15px;
-        list-style: none;
-        @media (min-width: $sm-min-width) {font-size: 20px;}
-        @media (min-width: $md-min-width) {
-          font-size: 25px;
-          .drop-item {
-            padding: 5px;
-          }
-        }
-        .drop-item {
-            @extend .serif;
-
-            text-align: left;
-            border: 1px solid black;
-            border-top-width: 0;
-            background-color: white;
-
-            .browse-link {
-                @include dp(inline-block,relative);
-                @include wh(100%,100%);
-
-                padding: 8px;
-                color: black;
-            }
-        }
-        .drop-item:first-of-type {
-                border-top-width: 1px;
-                border-radius: 5px 5px 0 0;
-        }
-        .drop-item:last-of-type { border-radius: 0 0 5px 5px; }
-        .drop-item:hover {
-                border-color: white;
-                background-color: transparent;
-            .browse-link { color: white; }
-        }
-        display: none;
-    }
-    .drop-menu.open {}
-}
-.a-gallery {
-	.gallery-cover {
-		border: 1px solid $primary-light-color;
-		.gallery-cover-img {
-			@include wh(100px,100px);
-		}
-	}
-}
-ul.a-gallery {
-  @include mp(0,0);
-}
-.responsive-slider {
-  .slick-arrow {
-    display: none!important;
-    .fa {
-      color: white;
-      font-size: $header-font-size;
-    }
-  }
-  .slick-prev {}
-  .slick-next {}
-  .slick-dots {
-    display: none!important;
-  }
-	.slick-list {
-		.slick-track {
-			.slick-slide {
-        img {
-          width: 100%;
-        }
-      }
-		}
-	}
-	.slick-dots {}
-}
+@import "classes/search-form";
+@import "classes/drop";
+@import "classes/slider";

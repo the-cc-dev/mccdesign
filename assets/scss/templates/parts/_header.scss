@@ -1,0 +1,10 @@
+.the-header {
+    @include dptl(inline-block,fixed,0,0);
+    @include whmp(100%,$header-height,0,0);
+
+  @import "navbar";
+
+  @media only screen and (min-width: $sm-min-width) {
+    border-bottom: 1px solid $primary-light-color;
+  }
+}

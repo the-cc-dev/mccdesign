@@ -7,39 +7,19 @@ $font-path: "../fonts";
 @import "../../bower_components/slick-carousel/slick/slick.scss";
 // endbower
 
+$fonts-url-base:
+"https://fonts.googleapis.com/css?family=";
+$fonts-url:
+"Merriweather:300,300i,400,400i,700,700i|Alegreya+Sans:300,300i,400,400i,700,700i";
 // google fonts
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i|Alegreya+Sans:300,300i,400,400i,700,700i');
+@import url($fonts-url-base + $fonts-url);
 
 @import "common/mixins";
 @import "common/classes";
 
-body {
-		@include dptl(block,absolute,0,0);
-		@include whmp(100vw,100vh,0,0);
-
-		background: $body-bg-color;
-		font: $body-font;
-
-	.body-container {
-			@include fill();
-
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			background-size: cover;
-
-		h1, h2, h3, h4, h5, h6 {
-				font-family: $h-font;
-		}
-		@import "templates/header";
-		@import "templates/main";
-		@import "templates/footer";
-	}
-}
+@import "templates/default";
 @import "templates/pages";
 @import "templates/home";
 @import "templates/galleries";
-/*
-@import "templates/about";
-@import "templates/gallery";
-@import "templates/contact";
-*/
+
+//@import "templates/";

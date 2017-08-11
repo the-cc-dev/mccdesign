@@ -1,0 +1,27 @@
+.gallery-slider {
+    .gallery-item {
+        .gallery-img {}
+        .gallery-link {}
+    }
+}
+
+.responsive-slider {
+    .slick-arrow {
+      display: none!important;
+        .fa {
+          color: $primary-light-color;
+          font-size: 20px;
+        }
+    }
+    .slick-prev {}
+    .slick-next {}
+    .slick-dots { display: none!important; }
+  	.slick-list {
+    		.slick-track {
+      			.slick-slide {
+                img { width: 100%; }
+            }
+    		}
+  	}
+  	.slick-dots {}
+}

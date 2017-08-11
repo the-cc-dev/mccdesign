@@ -1,0 +1,44 @@
+.navbar-header {
+  @include dptl(inline-block,relative,0,0);
+  @include whmp(100%,100%,0,0);
+
+  border-bottom: 1px solid $primary-light-color;
+
+    .navbar-toggle, .navbar-toggle:focus, .navbar-toggle:active {
+      @include whmp(40px,40px,4px,10px);
+
+      background-color: transparent;
+      border: 1px solid $primary-light-color;
+      border-radius: $border-radii;
+      cursor: pointer;
+
+        .fa-bars {
+          font-size: 20px;
+          color: $primary-light-color;
+        }
+    }
+    .navbar-toggle:hover {
+      background-color: $primary-light-color;
+      .fa-bars {
+        color: $primary-dark-color;
+      }
+    }
+    .navbar-brand {
+      @extend .sans;
+
+      font-size: 23px;
+      font-weight: 700;
+      color: $primary-light-color;
+    }
+
+}
+@media only screen and (min-width: $sm-min-width) {
+  .navbar-header {
+    max-width: 30%;
+    border-width: 0px;
+      .navbar-toggle {
+          .fa-bars {}
+      }
+      .navbar-brand {}
+  }
+}

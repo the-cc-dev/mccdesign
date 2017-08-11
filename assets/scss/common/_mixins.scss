@@ -76,17 +76,6 @@
 }
 
 
-
-@mixin colors($c,$tdc,$bgc,$bc,$crc,$o,$bs) {
-    color: $c;
-    text-decoration-color: $tdc;
-    background-color: $bgc;
-    border-color: $bc;
-    column-rule-color: $crc;
-    opacity: $o;
-    box-shadow: $bs;
-}
-
 //fill parent element
 @mixin fill() {
     @include dp(inline-block,relative);
@@ -95,40 +84,10 @@
     @include mp(0,0);
 }
 
-@mixin font($f,$ls) {
-    direction: ltr;
-    font: $f;
-    font-size-adjust: none;
-    font-stretch: normal;
-    letter-spacing: $ls;
-    vertical-align: middle;
-}
-@mixin text($c,$ta,$td,$ti,$tj,$to,$ts,$tt,$wb,$ws) {
-    color: $c;
-    text-align: $ta;
-    text-decoration: $td;
-    text-indent: $ti;
-    text-justify: $tj;
-    text-overflow: $to;
-    text-shadow: $ts;
-    text-transform: $tt;
-    word-break: $wb;
-    word-spacing: $ws;
-}
-/*
-@mixin gfont($font-name) {
-    @font-face {
-        font-family: ;
-        src: ;
-        font-weight: ;
-        font-style: ;
-    }
-}
-*/
-// footer-bottom height = proportionate height based on 
+// footer-bottom height = proportionate height based on
 // $footer-gate-ratio & $footer-gates
 @mixin footerBottomGates($number-of-gates) {
-    height: ($footer-gate-ratio/$number-of-gates) * $footer-width; 
+    height: ($footer-gate-ratio/$number-of-gates) * $footer-width;
 }
 /*
 @mixin ($,$) {
