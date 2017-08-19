@@ -1,21 +1,22 @@
 .navbar-body {
-  @include whmp(100%,auto,0,0);
+  @include dptl(none,fixed,0,0);
+  @include whmp(100%,auto,-5px 0 0,0);
 
-  background-color: $primary-dark-color;
+  background-color: $cmain;
   border-width: 0px;
 
     .navbar-nav {
       @include dptl(inline-block,relative,0,0);
-      @include whmp(100%,auto,0,0);
+      @include whmp(100%,100%,0,0);
       @extend .serif;
 
-      border-bottom: 1px solid $primary-light-color;
+      border-bottom: 1px solid $cneutral;
 
         .contact-us {
           @include dptl(inline-block,relative,0,0);
           @include whmp(100%,$header-height,0,0 80px);
 
-          background-color: $primary-dark-color;
+          background-color: $cmain;
 
             .contact-item {
               @include dptl(inline-block,relative,0,0);
@@ -28,8 +29,8 @@
                   @include dptl(inline-block,relative,0,0);
                   @include whmp(40px,40px,0,10px);
 
-                  color: $primary-light-color;
-                  border: 1px solid $primary-light-color;
+                  color: $cneutral;
+                  border: 1px solid $cneutral;
                   border-radius: $border-radii;
 
                     .contact-icon {
@@ -41,9 +42,9 @@
                     .contact-text { display: none; }
                 }
                 .contact-link:hover {
-                  color: $primary-dark-color;
-                  border-color: $primary-dark-color;
-                  background-color: $primary-light-color;
+                  color: $cmain;
+                  border-color: $cmain;
+                  background-color: $cneutral;
                 }
             }
         }
@@ -54,58 +55,12 @@
                 @include dptl(inline-block,relative,0,0);
             }
             .widget_nav_menu {
-              @include whmp(100%,200px,0,0);
+                @include whmp(100%,200px,0,0);
 
-              .menu-primary-container {
-                @include fill();
-
-                .menu {
-                  @include fill();
-
-                  list-style: none;
-
-                  .menu-item {
-                    @include dptl(inline-block,relative,0,0);
-                    @include whmp(100%,$header-height,0,0);
-
-                    text-align: center;
-
-                    a {
-                      @include fill();
-
-                      padding: 12.5px;
-                      font-size: 17.5px;
-                      vertical-align: middle;
-                      color: $primary-light-color;
-
-                      @media only screen and (min-width: $xs2-min-width) {
-                        padding: 15px;
-                        height: $header-height;
-                      }
-                    }
-                    a:hover {
-                      background-color: $primary-light-color;
-                      color: $primary-dark-color;
-                    }
-                  }
-                }
-              }
+              @import "nav-menu";
             }
             .widget_search {
-              .search-form-container {
-                display: none;
-                height: $header-height;
-                padding: 5px ($header-height*.2) 0;
-                .search-form {
-                  .input-group {
-                    .search-field {height: ($header-height*.8);}
-                    .input-group-btn {
-                      background-color: $primary-dark-color;
-                      .search-submit {height: ($header-height*.8);}
-                    }
-                  }
-                }
-              }
+                @include whmp(100%,$header-height,0,0);
             }
         }
     }
@@ -113,8 +68,8 @@
 .collapse.in, .collapsing { @include dp(inline-block,relative); }
 @media only screen and (min-width: $sm-min-width) {
   .navbar-body {
-    @include dptr(inline-block,relative,0,0);
-    @include whmp(auto,$header-height!important,0,0);
+    @include dptr(inline-block!important,relative,0,0);
+    @include whmp(60%,$header-height!important,0,0);
 
     background-color: transparent;
 
@@ -139,60 +94,23 @@
                     border-width: 0px;
 
                       .contact-icon {
-                        text-shadow: 1px 1px $primary-dark-color;
+                        text-shadow: 1px 1px $cmain;
                       }
                       .contact-icon:hover {
-                        text-shadow: 1px 1px $primary-light-color;
+                        text-shadow: 1px 1px $cneutral;
                       }
                   }
               }
           }
           .sb {
+            @include dptr(inline-block,relative,0,0);
+            @include whmp(auto,$header-height,0,0);
               .widget {
                 @include dptl(inline-block,relative,0,0);
                 @include whmp(auto,$header-height,0,0);
               }
-              .widget_nav_menu {
-                  .menu-primary-container {
-                      .menu {
-                          .menu-item {
-                            @include dptl(inline-block,relative,0,0);
-                            @include whmp(auto,$header-height,0,7.5px);
-
-                            float: left;
-
-                              a {
-                                @include whmp(auto,35px,0,3px);
-
-                                font-size: 20px;
-                                border-radius: $border-radii;
-                                text-shadow: 1px 1px $primary-dark-color;
-                              }
-                          }
-                          .menu-item:hover {
-                            a { text-decoration: none; }
-                          }
-                      }
-                  }
-              }
-              .widget_search {
-                  .search-form-container {
-                    @include dptr(none,fixed,0,50px);
-                      .search-form {
-                          .input-group {
-                              .search-field {}
-                              .input-group-btn {
-                                  .search-submit {
-												            background-color: gray;
-                                  }
-                              }
-                          }
-                      }
-                  }
-                  .search-form-container.open {
-                    display: inline-block;
-                  }
-              }
+              .widget_nav_menu {}
+              .widget_search {}
           }
       }
   }

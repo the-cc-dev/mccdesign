@@ -4,7 +4,9 @@
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
 
-	<?php get_template_part('templates/browse-drop'); ?>
+	<div class="browse-drop drop">
+	  <?php get_template_part('templates/browse-drop'); ?>
+	</div>
 
 	<?php if($images): ?>
 

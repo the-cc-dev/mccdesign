@@ -1,17 +1,6 @@
 .sans { font-family: $sans-font; }
 .serif { font-family: $serif-font; }
 
-.page-title {
-    @extend .sans;
-
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 1px 1px $primary-dark-color;
-    color: $primary-light-color;
-}
-.entry-title {}
-.entry-summary {}
-
 @import "classes/search-form";
 @import "classes/drop";
 @import "classes/slider";

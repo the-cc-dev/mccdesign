@@ -1,14 +1,21 @@
 .the-footer {
-  @include dpbl(inline-block,fixed,0,0);
-  @include whmp(100%,auto,0,0);
+  @include dpbl(inline-block,absolute,0,0);
+  @include whmp(100%,$footer-height,0,0);
     .footer-bottom {
-      @include dpbl(inline-block,relative,0,0);
+      @include dpbl(inline-block,absolute,0,0);
       @include footerBottomGates($footer-gates-xs);
 
       width: 100%;
       background-repeat: repeat-x;
       background-size: contain;
     }
+}
+@media (min-width: ($xs-min-width + 1px)) {
+  .the-footer {
+    .footer-bottom {
+      @include footerBottomGates($footer-gates-xs2);
+    }
+  }
 }
 @media only screen and (min-width: $xs2-min-width) {
   .the-footer {
@@ -30,13 +37,6 @@
         @include footerBottomGates($footer-gates-sm);
       }
   }
-}
-@media only screen and (min-width: 769px) {
-    .the-footer {
-        .footer-bottom {
-            @include footerBottomGates(4);
-        }
-    }
 }
 @media only screen and (min-width: $md-min-width) {
   .the-footer {

@@ -1,44 +1,53 @@
 .navbar-header {
-  @include dptl(inline-block,relative,0,0);
-  @include whmp(100%,100%,0,0);
+  @include fill();
 
-  border-bottom: 1px solid $primary-light-color;
+  padding: 7.5px;
+  border-bottom: 1px solid $cneutral;
 
     .navbar-toggle, .navbar-toggle:focus, .navbar-toggle:active {
-      @include whmp(40px,40px,4px,10px);
+      @include dptr(inline-block,relative,0,0);
+      @include whmp(35px,35px,0,7.5px);
 
       background-color: transparent;
-      border: 1px solid $primary-light-color;
+      border: 1px solid $cneutral;
       border-radius: $border-radii;
       cursor: pointer;
 
         .fa-bars {
           font-size: 20px;
-          color: $primary-light-color;
+          color: $cneutral;
         }
     }
     .navbar-toggle:hover {
-      background-color: $primary-light-color;
+      background-color: $cneutral;
       .fa-bars {
-        color: $primary-dark-color;
+        color: $cmain;
+        vertical-align: middle;
       }
     }
     .navbar-brand {
       @extend .sans;
+        @include dptr(inline-block,relative,0,0);
+        @include whmp(85%,auto,0,7px);
 
+      vertical-align: middle;
       font-size: 23px;
       font-weight: 700;
-      color: $primary-light-color;
+      color: $cneutral;
     }
 
 }
 @media only screen and (min-width: $sm-min-width) {
   .navbar-header {
-    max-width: 30%;
+    width: 35%;
+    //padding: 0;
     border-width: 0px;
       .navbar-toggle {
+        display: none;
           .fa-bars {}
       }
-      .navbar-brand {}
+      .navbar-brand {
+        width: 100%;
+      }
   }
 }

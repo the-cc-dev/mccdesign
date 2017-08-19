@@ -3,10 +3,13 @@ body {
   	@include whmp(100vw,100vh,0,0);
     @extend .serif;
 
-  	background: $primary-dark-color;
-
+    min-width: 320px;
+  	background-color: $cmain;
+    overflow: hidden;
+    
 	.body-container {
-  		@include fill();
+    	@include dptl(block,fixed,0,0);
+    	@include whmp(100%,100%,0,0);
 
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -15,19 +18,39 @@ body {
     @import "parts/header";
 
     .the-main {
-      @include dptl(inline-block,fixed,0,0);
-      @include whmp(100%,auto,$header-height 0 0,0 0 $header-height);
+      @include dptl(inline-block,absolute,$header-height,0);
+      @include whmp(100%,$main-height,0,0);
 
-      overflow:hidden;
+      z-index: $main-z;
+      overflow: hidden;
 
       .container-fluid {
-          @include dptl(inline-block,relative,0,0);
-          @include wh(115%,105%,0 0 0 -7.5%,0);
+          @include fill();
 
-          overflow: scroll;
+          overflow: hidden;
+
+          @import "parts/page-title";
+          @import "parts/content";
+          @import "parts/gallery-slider";
+      }
+    }
+    @import "parts/footer";
+  }
+  @media only screen and (min-width:$xs2-min-width) {}
+  @media only screen and (min-width:$xs3-min-width) {}
+  @media only screen and (min-width:$sm-min-width) {
+    .body-container {
+      .the-main {
+          @include fill();
+          padding-top: 50px;
+        .container-fluid {
+            @include fill();
+            overflow: hidden;
+        }
       }
     }
 
-    @import "parts/footer";
   }
+  @media only screen and (min-width:$md-min-width) {}
+  @media only screen and (min-width:$lg-min-width) {}
 }

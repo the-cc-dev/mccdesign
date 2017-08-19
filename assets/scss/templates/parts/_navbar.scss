@@ -1,6 +1,5 @@
 .the-navbar {
-  @include dptl(inline-block,relative,0,0);
-  @include whmp(100%,auto,0,0);
+  @include fill();
 
   background-color: transparent;
   border-width: 0px;

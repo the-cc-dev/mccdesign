@@ -84,10 +84,13 @@
     @include mp(0,0);
 }
 
+
 // footer-bottom height = proportionate height based on
 // $footer-gate-ratio & $footer-gates
+
 @mixin footerBottomGates($number-of-gates) {
-    height: ($footer-gate-ratio/$number-of-gates) * $footer-width;
+  $fgh: ($footer-gate-ratio/$number-of-gates) * $footer-width;
+  height: $fgh;
 }
 /*
 @mixin ($,$) {
