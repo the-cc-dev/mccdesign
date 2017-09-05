@@ -14,7 +14,7 @@
 				.galleries {
 					.page-title {
 						font-size: 30px;
-						@include mp(0,0);
+						@include mp(20px 0,0);
 					}
 				/* .browse-drop {
 					.drop-toggle {

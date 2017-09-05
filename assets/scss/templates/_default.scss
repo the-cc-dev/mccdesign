@@ -6,7 +6,7 @@ body {
     min-width: 320px;
   	background-color: $cmain;
     overflow: hidden;
-    
+
 	.body-container {
     	@include dptl(block,fixed,0,0);
     	@include whmp(100%,100%,0,0);
