@@ -6,7 +6,7 @@
 
   .drop-toggle {
   		@include dptl(inline-block,relative,0,0);
-      @include whmp(auto,auto,5px 0 15px,6px);
+      @include whmp(auto,auto,5px 0 5px,6px);
       @extend .sans;
 
       font-size: 22px;
@@ -31,6 +31,7 @@
       border-radius: $border-radii;
       font-size: 15px;
       list-style: none;
+      //z-index: $drop-z;
 
     .drop-item {
         @extend .serif;

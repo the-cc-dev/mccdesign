@@ -1,6 +1,6 @@
 .page-title {
-    @include dptl(inline-block,relative,10px,0);
-    @include whmp(100%,auto,20px 0,0);
+    @include dptl(inline-block,relative,0,0);
+    @include whmp(100%,auto,40px 0 0,10px 7.5%);
     @extend .serif;
 
     text-align: center;
@@ -9,10 +9,7 @@
     color: $cneutral;
 }
 @media only screen and (min-width:$xs2-min-width) {
-  .page-title { padding: 15px; }
-}
-@media (min-width: 390px) {
-  .page-title { padding: 0 10%!important; }
+  .page-title {}
 }
 @media only screen and (min-width:$xs3-min-width) {
   .page-title {}

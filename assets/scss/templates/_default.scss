@@ -5,7 +5,6 @@ body {
 
     min-width: 320px;
   	background-color: $cmain;
-    overflow: hidden;
 
 	.body-container {
     	@include dptl(block,fixed,0,0);
@@ -22,16 +21,9 @@ body {
       @include whmp(100%,$main-height,0,0);
 
       z-index: $main-z;
-      overflow: hidden;
 
       .container-fluid {
           @include fill();
-
-          overflow: hidden;
-
-          @import "parts/page-title";
-          @import "parts/content";
-          @import "parts/gallery-slider";
       }
     }
     @import "parts/footer";

@@ -12,7 +12,7 @@
     .header-img.right {@include tr(0,0);}
     .header-img {
       @include dp(inline-block,absolute);
-      @include whmp(70px,70px,0,0);
+      @include whmp(100px,100px,0,0);
     }
 }
 @media only screen and (min-width: $xs2-min-width) {
@@ -23,7 +23,7 @@
   }
   .header-bottom {
     .header-img {
-      @include wh(80px,80px);
+      @include wh(120px,120px);
     }
   }
 }
@@ -35,7 +35,7 @@
   }
   .header-bottom {
     .header-img {
-      @include wh(90px,90px);
+      @include wh(140px,140px);
     }
   }
 }
@@ -47,7 +47,7 @@
   }
   .header-bottom {
     .header-img {
-      @include wh(100px,100px);
+      @include wh(160px,160px);
     }
   }
 }
@@ -64,7 +64,7 @@
   }
   .header-bottom {
     .header-img {
-      @include wh(110px,110px);
+      @include wh(180px,180px);
     }
   }
 }
@@ -76,7 +76,7 @@
   }
   .header-bottom {
     .header-img {
-      @include wh(120px,120px);
+      @include wh(200px,200px);
     }
   }
 }

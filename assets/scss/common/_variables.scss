@@ -15,14 +15,17 @@ $lg-min-width: 1440px;
 
 /* z-indexes */
 $header-z: 3;
-$nav-z: 4;
-$search-z: 5;
+$nav-z: 5;
+$search-z: 6;
 $main-z: 2;
 $content-z: 1;
+$drop-z: 4;
+$galtitle-z: 2;
+$galimg-z: 1;
 $footer-z: 3;
 
 $border-radii: 5px;
-$tshad1: 1px 1px $cmain;
+$tshad1: -1px 1px $cmain;
 $tshad2: -1px -1px $cneutral;
 
 /* HEADER */
@@ -32,7 +35,8 @@ $neghh: -($header-height);
 $main-height: 70%;
 $footer-height: 15%;
 
-$imgsize: 180px;
+$imgsize: 100px;
+$imgsize2: $imgsize + 75px;
 
 /* FOOTER  */
 // height:width ratio of gate image

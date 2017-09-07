@@ -14,13 +14,13 @@
 
         .contact-us {
           @include dptl(inline-block,relative,0,0);
-          @include whmp(100%,$header-height,0,0 80px);
+          @include whmp(100%,$header-height,0,0 100px);
 
           background-color: $cmain;
 
             .contact-item {
               @include dptl(inline-block,relative,0,0);
-              @include whmp(50%,100%,0,7.5px 15px 0);
+              @include whmp(50%,100%,0,7.5px 10px 0);
 
               float: left;
               text-align: center;

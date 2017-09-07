@@ -18,8 +18,11 @@ $fonts-url:
 @import "common/classes";
 
 @import "templates/default";
-@import "templates/pages";
+//@import "templates/pages";
 @import "templates/home";
+@import "templates/about";
+@import "templates/gallery";
+@import "templates/contact";
 @import "templates/galleries";
 
 //@import "templates/";
