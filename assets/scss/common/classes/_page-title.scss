@@ -1,5 +1,5 @@
 .page-title {
-    @include dptl(inline-block,relative,0,0);
+		@include dptl(inline-block,relative,0,0);
     @include whmp(100%,auto,40px 0 0,10px 7.5%);
     @extend .serif;
 
@@ -7,19 +7,9 @@
     font-size: 30px;
     text-shadow: 1px 1px $cmain;
     color: $cneutral;
+
+	@media only screen and (min-width:$sm-min-width) {
+		font-size: 40px; 
+	}
 }
-@media only screen and (min-width:$xs2-min-width) {
-  .page-title {}
-}
-@media only screen and (min-width:$xs3-min-width) {
-  .page-title {}
-}
-@media only screen and (min-width:$sm-min-width) {
-  .page-title { font-size: 40px; }
-}
-@media only screen and (min-width:$md-min-width) {
-  .page-title {}
-}
-@media only screen and (min-width:$lg-min-width) {
-  .page-title {}
-}
+
