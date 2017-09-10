@@ -4,6 +4,7 @@ body {
     @extend .serif;
 
     min-width: 320px;
+		min-height: 500px;
   	background-color: $cmain;
 
 	.body-container {
@@ -21,9 +22,25 @@ body {
       @include whmp(100%,$main-height,0,0);
 
       z-index: $main-z;
-
-      .container-fluid {
-          @include fill();
+			overflow: hidden;
+      .main-container {
+				@include dptl(inline-block,relative,0,-5%);
+				@include whmp(110%,105%,0,0 10%);
+				
+				overflow: scroll;
+				
+				.page-title {
+					@include dptl(inline-block,relative,0,0);
+					@include whmp(100%,auto,0,5%);
+				}
+				.the-content {
+					@include dptl(inline-block,relative,0,0);
+					@include whmp(100%,auto,0,5% 2.5%);
+					.content-text {
+						color: $cneutral;
+						text-shadow: $tshad1;
+					}
+				}
       }
     }
     @import "parts/footer";

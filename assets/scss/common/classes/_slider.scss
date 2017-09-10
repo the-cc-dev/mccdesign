@@ -1,15 +1,14 @@
 .gallery-covers {
     @include dptl(inline-block,relative,0,0);
-    @include whmp(100%,250px,35px 0 0,10px);
+    @include whmp(100%,250px,20px 0 0,10px);
 
   .gallery-slider {
       @include fill();
-
-    .slick-arrow {display: none;}
-    .slick-dots {display: none;}
+		@media (min-width: 860px) {padding: 0 100px;}
+		@media (min-width: 1060px) {padding: 0 200px;}
+		@media (min-width: 1260px) {padding: 0;}
   	.slick-list {
         @include fill();
-
       .slick-track {
           @include fill();
   			.slick-slide {
@@ -19,10 +18,8 @@
   	}
     .gallery-item {
         @include fill();
-
       .gallery-link {
           @include fill();
-
         .gallery-title {
             @include dptl(inline-block,absolute,0,0);
             @include whmp(100%,100%,75px 0,0);
@@ -39,8 +36,7 @@
             @include dptl(inline-block,absolute,0,0);
             @include whmp(100%,100%,0,0);
 
-            //max-height: 250px;
-            z-index: 1;
+              z-index: $galimg-z;
         }
       }
     }
@@ -48,64 +44,20 @@
 }
 @media only screen and (min-width: $xs2-min-width) {
   .gallery-covers {
-      @include dptl(inline-block,relative,0,0);
-      @include whmp(100%,250px,35px 0 0,10px);
     .gallery-slider {
-        @include fill();
       .slick-list {
-          @include fill();
-        .slick-track {
-            @include fill();
-        }
+        .slick-track {}
       }
       .gallery-item {
-          @include fill();
         .gallery-link {
-            @include fill();
-          .gallery-title {
-              @include dptl(inline-block,absolute,0,0);
-              @include whmp(100%,100%,75px 0,0);
-
-              color: $cneutral;
-              text-shadow: $tshad1;
-              font-size: 30px;
-              text-align: center;
-              vertical-align: middle;
-              z-index: $galtitle-z;
-          }
-          .gallery-img {
-              @include dptl(inline-block,absolute,0,0);
-              @include whmp(100%,100%,0,0);
-
-              z-index: $galimg-z;
-          }
+          .gallery-title {}
+          .gallery-img {}
         }
       }
     }
   }
 }
-@media only screen and (min-height: 667px) {
-  .gallery-covers {
-      height: 350px;
-    .gallery-slider {
-      .slick-list {
-        .slick-track {
-          .gallery-item {
-            .gallery-link {
-              .gallery-img {
-                  height: 350px;
-              }
-              .gallery-title {
-                  margin-top: 100px;
-                  font-size: 50px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+
 @media only screen and (min-width:$xs3-min-width) {
   .gallery-covers {
       padding-top: 30px;
@@ -147,7 +99,7 @@
     }
   }
 }
-@media only screen and (min-height: 769px) {
+@media only screen and (min-height: 769px) and (min-width: $sm-min-width) {
   .gallery-covers {
     .gallery-slider {
       .gallery-item {
@@ -157,48 +109,9 @@
               @include wh($imgsize2,$imgsize2);
           }
           .gallery-title {
-              margin-top: 40px;
-              font-size: 35px;
+              //margin-top: 40px;
+              //font-size: 35px;
           }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 860px) {
-  .gallery-covers {
-    .gallery-slider {
-        padding: 0 100px;
-      .gallery-item {
-        .gallery-link {
-          .gallery-title {}
-          .gallery-img {}
-        }
-      }
-    }
-  }
-}
-@media (min-width: 1060px) {
-  .gallery-covers {
-    .gallery-slider {
-        padding: 0 200px;
-      .gallery-item {
-        .gallery-link {
-          .gallery-title {}
-          .gallery-img {}
-        }
-      }
-    }
-  }
-}
-@media (min-width: 1260px) {
-  .gallery-covers {
-    .gallery-slider {
-        padding: 0;
-      .gallery-item {
-        .gallery-link {
-          .gallery-title {}
-          .gallery-img {}
         }
       }
     }

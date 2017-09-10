@@ -14,23 +14,23 @@
     }
   }
 }
-    @media only screen and (min-width: $sm-min-width) {
-      .search-form-container{
-        @include dptr(none,fixed,0,0);
-        @include whmp(100%,$header-height,0,5px 10% 0 270px);
-        .search-form {
-        }
-      }
-      .search-toggle {
-        @include dptr(inline-block,fixed,0,0);
-        @include whmp(10%,$header-height,0,8.5px 0);
+@media only screen and (min-width: $sm-min-width) {
+	.search-form-container{
+		@include dptr(none,fixed,0,0);
+		@include whmp(100%,$header-height,0,5px 10% 0 270px);
+		.search-form {
+		}
+	}
+	.search-toggle {
+		@include dptr(inline-block,fixed,0,0);
+		@include whmp(10%,$header-height,0,8.5px 0);
 
-        text-align: center;
-        z-index: $search-z;
-        .btn {}
-      }
-    }
+		text-align: center;
+		z-index: $search-z;
+		.btn {}
+	}
+}
 
-  .search-form-container.open {
-    display: inline-block;
-  }
+.search-form-container.open {
+	display: inline-block;
+}

@@ -11,4 +11,4 @@
 	</nav>
 </header>
 <main id="main" class="the-main">
-	<div class="container-fluid">
+	<div class="main-container">

@@ -2,7 +2,11 @@
 
 <?php get_template_part('templates/header'); ?>
 
-<?php get_template_part('templates/content-contact'); ?>
+<h1 class="page-title"><?php the_title(); ?></h1>
+	
+<?php get_template_part("templates/contact-us"); ?>
+	
+<?php get_template_part('templates/content'); ?>
 
 <?php get_template_part('templates/footer'); ?>
 

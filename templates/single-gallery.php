@@ -1,14 +1,4 @@
-<?php $images = get_field('gallery_field'); ?>
-
-<div <?php post_class(); ?>>
-
-	<h1 class="page-title"><?php the_title(); ?></h1>
-
-	<div class="browse-drop drop">
-	  <?php get_template_part('templates/browse-drop'); ?>
-	</div>
-
-	<?php if($images): ?>
+<?php if($images): ?>
 
 		<div class="gallery-slider responsive-slider">
 
@@ -26,5 +16,3 @@
 		</div>
 
 	<?php	endif; ?>
-
-  </div>

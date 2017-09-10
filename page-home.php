@@ -2,7 +2,13 @@
 
 <?php get_template_part('templates/header'); ?>
 
-<?php get_template_part('templates/content-home'); ?>
+<h3 class="page-title">
+  <?php the_field('home_text'); ?>
+</h3>
+
+<?php get_template_part('templates/browse-drop'); ?>
+
+<?php get_template_part('templates/gallery-covers'); ?>
 
 <?php get_template_part('templates/footer'); ?>
 

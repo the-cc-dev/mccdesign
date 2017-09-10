@@ -2,7 +2,9 @@
 
 <?php get_template_part('templates/header'); ?>
 
-<?php get_template_part('templates/content-page'); ?>
+<h3 class="page-title"><?php the_title(); ?></h3>
+  
+<?php get_template_part('templates/content'); ?>
 
 <?php get_template_part('templates/footer'); ?>
 

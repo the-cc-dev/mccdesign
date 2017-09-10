@@ -1,6 +1,4 @@
 .page-title {
-		@include dptl(inline-block,relative,0,0);
-    @include whmp(100%,auto,40px 0 0,10px 7.5%);
     @extend .serif;
 
     text-align: center;

@@ -25,7 +25,8 @@ $(document).ready(function(){
 		//gallery carousel setup
 
 		 $('.responsive-slider').slick({
-			 dots: true,
+			 dots: false,
+			 arrows: false,
 			 autoplay: true,
 			 mobileFirst: true,
 			 swipeToSlide: true,
@@ -37,10 +38,6 @@ $(document).ready(function(){
 					 settings: "unslick"
 				 }]
 		 });
-
-		$('.slick-arrow').html('<i class="fa"></i>');
-		$('.slick-prev .fa').addClass('fa-chevron-circle-left');
-		$('.slick-next .fa').addClass('fa-chevron-circle-right');
 
 
     console.log('document is ready.');
