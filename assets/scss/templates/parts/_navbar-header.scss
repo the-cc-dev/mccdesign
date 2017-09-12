@@ -6,7 +6,7 @@
 
     .navbar-toggle, .navbar-toggle:focus, .navbar-toggle:active {
       @include dptr(inline-block,relative,0,0);
-      @include whmp(35px,35px,0,7.5px);
+      @include whmp($contact-item-height,$contact-item-height,0,3.5px);
 
       background-color: transparent;
       border: 1px solid $cneutral;
@@ -14,7 +14,7 @@
       cursor: pointer;
 
         .fa-bars {
-          font-size: 20px;
+          font-size: $nav-font-size;
           color: $cneutral;
         }
     }
@@ -28,12 +28,14 @@
     .navbar-brand {
       @extend .sans;
         @include dptr(inline-block,relative,0,0);
-        @include whmp(85%,auto,0,7px);
+        @include whmp(85%,auto,0,5px);
 
       vertical-align: middle;
-      font-size: 23px;
+      font-size: $nav-font-size;
       font-weight: 700;
-      color: $cneutral;
+      color: $navbar-brand-color;
+			text-shadow: $tshad2;
+			text-transform: uppercase;
     }
 
 }

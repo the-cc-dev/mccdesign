@@ -3,12 +3,12 @@
   .search-form {
     padding: 0 10px;
     .input-group {
-      .search-field {height: ($header-height*.8);}
+      .search-field {height: $search-menu-height;}
       .input-group-btn {
           background-color: $cmain;
         .search-submit {
           background-color: gray;
-          height: ($header-height*.8);
+          height: $search-menu-height;
         }
       }
     }

@@ -1,54 +1,15 @@
-/* FONTS */
-$sans-font: 'Alegreya Sans', sans-serif;
-$serif-font: 'Merriweather', serif;
-
-/* COLORS */
+@import "vars/fonts";
 @import "vars/colors";
+@import "vars/breakpoints";
+@import "vars/z-indexes";
+@import "vars/dimensions";
 
-/* BREAKPOINTS (DevTools Responsive widths) */
-$xs-min-width: 320px;
-$xs2-min-width: 375px;
-$xs3-min-width: 425px;
-$sm-min-width: 768px;
-$md-min-width: 1024px;
-$lg-min-width: 1440px;
 
-/* z-indexes */
-$header-z: 3;
-$nav-z: 5;
-$search-z: 6;
-$main-z: 2;
-$content-z: 1;
-$drop-z: 4;
-$galtitle-z: 2;
-$galimg-z: 1;
-$footer-z: 3;
+
 
 $border-radii: 5px;
-$tshad1: -1px 1px $cmain;
-$tshad2: -1px -1px $cneutral;
+$tshad1: -1px 1px $tshad1-color;
+$tshad2: -1px -1px 1px $tshad2-color;
 
-/* HEADER */
-$header-height: 50px;
-$neghh: -($header-height);
 
-$main-height: 70%;
-$footer-height: 15%;
 
-$imgsize: 100px;
-$imgsize2: $imgsize;
-
-/* FOOTER  */
-// height:width ratio of gate image
-$footer-gate-ratio: .90798;
-// width = 100% of device width
-$footer-width: 100vw;
-// number of gates on phones
-$footer-gates-xs: 1.98;
-$footer-gates-xs2: 2.98;
-$footer-gates-xs3: 4.98;
-// number of gates on tablets
-$footer-gates-sm: 5.98;
-// number of gates on laptops
-$footer-gates-md: 6.98;
-$footer-gates-lg: 7.98;

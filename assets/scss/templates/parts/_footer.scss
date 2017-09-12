@@ -1,14 +1,35 @@
 .the-footer {
-  @include dpbl(inline-block,absolute,0,0);
-  @include whmp(100%,$footer-height,0,0);
-    .footer-bottom {
-      @include dpbl(inline-block,absolute,0,0);
-      @include footerBottomGates($footer-gates-xs);
+  @include dpbl(inline-block,absolute,75px,0);
+  @include whmp(100%,auto,0,0);
+	
+	color: $cneutral;
+	text-align: center;
+	font-size: 12px;
+	
+		hr {
+			width: 50%;
+			margin: 2px 25%;
+		}
+	
+	.footer-info {
+		@extend .row;
+		.footer-info-item {
+			@extend .col-xs-12;
+		}
+		.copyright-brand {
+			
+		}
+		.phone-number {}
+	}
+	
+	.footer-bottom {
+		@include dpbl(inline-block,fixed,0,0);
+		@include footerBottomGates($footer-gates-xs);
 
-      width: 100%;
-      background-repeat: repeat-x;
-      background-size: contain;
-    }
+		width: 100%;
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
 }
 @media (min-width: ($xs-min-width + 1px)) {
   .the-footer {

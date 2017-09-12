@@ -14,20 +14,20 @@
 
         .contact-us {
           @include dptl(inline-block,relative,0,0);
-          @include whmp(100%,$header-height,0,0 100px);
+          @include whmp(100%,$nav-item-height,0,0 100px);
 
           background-color: $cmain;
 
             .contact-item {
               @include dptl(inline-block,relative,0,0);
-              @include whmp(50%,100%,0,7.5px 10px 0);
+              @include whmp(50%,100%,0,5px);
 
               float: left;
               text-align: center;
 
                 .contact-link {
                   @include dptl(inline-block,relative,0,0);
-                  @include whmp(40px,40px,0,10px);
+                  @include whmp($contact-item-height,$contact-item-height,0,5px);
 
                   color: $cneutral;
                   border: 1px solid $cneutral;
@@ -35,9 +35,9 @@
 
                     .contact-icon {
                       @include dptl(inline-block,relative,0,0);
-                      @include whmp(20px,20px,0,0);
+                      @include whmp($nav-font-size,$nav-font-size,0,0);
 
-                      font-size: 20px;
+                      font-size: $nav-font-size;
                     }
                     .contact-text { display: none; }
                 }
@@ -55,12 +55,12 @@
                 @include dptl(inline-block,relative,0,0);
             }
             .widget_nav_menu {
-                @include whmp(100%,200px,0,0);
+                @include whmp(100%,$nav-menu-height,0,0);
 
               @import "nav-menu";
             }
             .widget_search {
-                @include whmp(100%,$header-height,0,0);
+                @include whmp(100%,$nav-item-height,0,0);
             }
         }
     }
@@ -68,7 +68,7 @@
 .collapse.in, .collapsing { @include dp(inline-block,relative); }
 @media only screen and (min-width: $sm-min-width) {
   .navbar-body {
-    @include dptr(inline-block!important,relative,0,0);
+    @include dptr(inline-block,relative,0,0);
     @include whmp(60%,$header-height!important,0,0);
 
     background-color: transparent;

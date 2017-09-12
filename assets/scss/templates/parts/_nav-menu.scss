@@ -8,21 +8,19 @@
 
     .menu-item {
       @include dptl(inline-block,relative,0,0);
-      @include whmp(100%,$header-height,0,0);
+      @include whmp(100%,$nav-item-height,0,0);
 
       text-align: center;
 
       a {
         @include fill();
-
-        padding: 12.5px;
-        font-size: 17.5px;
+        font-size: $nav-font-size;
         vertical-align: middle;
         color: $cneutral;
 
         @media only screen and (min-width: $xs2-min-width) {
-          padding: 15px;
-          height: $header-height;
+          //padding: 15px;
+          //height: $nav-item-height;
         }
       }
       a:hover {

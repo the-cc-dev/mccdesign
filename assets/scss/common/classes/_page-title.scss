@@ -2,12 +2,11 @@
     @extend .serif;
 
     text-align: center;
-    font-size: 30px;
-    text-shadow: 1px 1px $cmain;
-    color: $cneutral;
+    font-size: 22px;
+		color: $page-title-color;
+		text-shadow: $tshad2;
 
-	@media only screen and (min-width:$sm-min-width) {
-		font-size: 40px; 
-	}
+	@media only screen and (min-width:$xs2-min-width) {}
+	@media only screen and (min-width:$sm-min-width) {}
 }
 
