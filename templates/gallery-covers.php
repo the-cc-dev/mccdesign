@@ -2,8 +2,8 @@
       $loop = new WP_Query( $args );
       if ( $loop->have_posts() ) :
 ?>
-  <div class="gallery-covers">
-    <div class="gallery-slider responsive-slider">
+  <div id="galleryCovers" class="gallery-covers">
+    <div id="gallerySlider" class="responsive-slider">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="gallery-item">
         <a class="gallery-link" href="<?php the_permalink(); ?>">

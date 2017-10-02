@@ -1,0 +1,226 @@
+.the-header {
+	@include wh(100%,$height1);
+	position: fixed;
+	z-index: $header-z;
+	.the-navbar {
+		@include fill();
+		.navbar-header {
+			@include fill();
+			border-bottom: 1px solid $brand-light;
+			height: $height1;
+			padding: 5px;
+			.navbar-toggle {
+				@include dptr(inline-block,fixed,0,0);
+				@include mp(5px,0);
+				@include sq($height2);
+				align-items: center;
+				.fa-bars {
+					@include dptl(inline-block,absolute,0,0);
+					@include sq(20px);
+					padding: 5px;
+					font-size: 20px;
+				}
+			}
+			.navbar-toggle:hover {
+				background-color: $brand-light;
+				@include border(1px solid $brand-dark,$border-radius);
+				.fa-bars {
+					color: $brand-dark;
+				}
+			}
+			.navbar-brand {
+				height: $height1;
+				color: $brand-light;
+				font-family: $brand-font;
+				font-size: 22px;
+				text-transform: uppercase;
+				@include mp(0,5px);
+			}
+		}
+		.navbar-body {
+			position: absolute;
+			top: $height1;
+			width: 100%;
+			max-height: none;
+			background-color: $brand-dark;
+			border-bottom: 1px solid $brand-light;
+			.navbar-nav { 
+				@media (max-width: 767px) {@include fill();}
+				#headerContact {
+					.contact-us {
+						height: $height1;
+						text-align: center;
+						.contact-item {
+							@include sq($height1);
+							display: inline-block;
+							padding: 5px;
+							.contact-link {
+								@include fill();
+								@include border(1px solid $brand-light,$border-radius);
+								color: $brand-light;
+								font-size: 20px;
+								.contact-icon {
+									@include dptl(inline-block,absolute,0,0);
+									margin: 4px;
+								}
+								.contact-text, .the-info {display: none;}
+							}
+						}
+					}
+				}
+				.nav-sb {
+					.widget_nav_menu {
+						.menu-primary-container {
+							.menu {
+								@include mp(0,0);
+								list-style: none;
+								.menu-item {
+									height: $height1;
+									text-align: center;
+									a {
+										@include dp(inline-block,relative);
+										border-radius: $border-radius;
+										padding: 5px;
+										width: 80px;
+										font-size: 20px;
+										color: $brand-light;
+										font-family: $sans-font;
+									}
+									a:hover {
+										color: $brand-dark;
+										background-color: $brand-light;
+										text-decoration: underline;
+									}
+								}
+							}
+						}
+					}
+					.widget_search {}
+				}
+			}
+		}
+		.search-toggle {
+			@media (max-width: 767px) {display: none;}
+			.btn {
+				.fa-search {}
+			}
+		}
+		@import "header-bottom";
+	}
+}
+	@media (min-width: 768px) {
+		#theHeader {
+				@include dptl(inline-block,fixed,0,0);
+				height: $height4;
+			#theNavbar {
+				@include dptl(inline-block,relative,0,0);
+				height: $height4;
+				border-color: $brand-light;
+				padding: 10px;
+				#navHead {
+					@include dp(inline-block,relative);
+					padding: 5px;
+					width: auto;
+					height: $height2;
+					border-width: 0;
+					.navbar-toggle {display: none;}
+					.navbar-brand {
+					@include dp(inline-block,relative);
+						font-size: 25px;
+						padding: 0;
+						height: $height5;
+					}
+				}
+				#navBody {
+					background-color: transparent;
+					border-width: 0;
+					#theNav {
+						#headerContact, #navSb .the-sidebar .widget_nav_menu .menu-primary-container {
+							@include dp(inline-block,fixed);
+							top: 0;
+							padding: 5px;
+							height: $height4;
+						}
+						#headerContact {
+							right: 45px;
+							.contact-item {
+								@include sq($height2);
+								padding: 0;
+								margin: 5px;
+								.contact-link {
+									.contact-icon {}
+								}
+							}
+						}
+						#navSb {
+							.the-sidebar {
+								.widget {}
+								.widget_nav_menu {
+									.menu-primary-container {
+										left: 37%;
+										.menu {
+											.menu-item {
+												display: inline-block;	
+												padding: 0px;
+												a {
+													display: inline-block;
+													position: relative;
+													height: 100%;
+													font-size: 17px;
+													padding: 7px;
+												}
+											}
+											.menu-item:hover {
+												text-decoration: underline;
+												a {
+													color: $brand-light;
+													background-color: transparent;
+												}
+											}
+										}
+									}
+								}
+								.widget_search {
+									.search-form-container {
+										@include dptr(none,fixed,10px,50px);
+										width: 55%;
+										@media (min-width: 915px) {
+											width: 60%;
+										}
+										@media (min-width: 1024px) {
+											width: 20%;
+										}
+										@media (min-width: 1440px) {
+											right: 200px;
+										}
+										.search-form {
+											.input-group {
+												.search-field {}
+												.input-group-btn {
+													.search-submit {}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.search-toggle {
+					position: fixed;
+					right: 10px;
+					.btn {
+					@include sq($height2);
+						padding: 5px;
+						background-color: transparent;
+						@include border(1px solid $brand-light,$border-radius);
+					}
+				}
+				#navBody #theNav #headerContact .contact-item .contact-link:hover, .search-toggle .btn:hover {
+					background-color: $brand-light;
+					color: $brand-dark;
+				}
+			}
+		}
+	}

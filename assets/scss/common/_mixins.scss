@@ -75,6 +75,24 @@
     @include mp($m,$p);
 }
 
+//positions & dimensions
+  //width, left, height, top
+@mixin wlht($w,$l,$h,$t) {
+	@include wh($w,$h);
+	@include tl($t,$l);
+} //width, right, height, top
+@mixin wrht($w,$r,$h,$t) {
+	@include wh($w,$h);
+	@include tr($t,$r);
+} //width, left, height, bottom
+@mixin wlhb($w,$l,$h,$b) {
+	@include wh($w,$h);
+	@include bl($b,$l);
+} //width, right, height, bottom
+@mixin wrhb($w,$r,$h,$b) {
+	@include wh($w,$h);
+	@include br($b,$r);
+}
 
 //fill parent element
 @mixin fill() {
@@ -82,6 +100,18 @@
     @include tl(0,0);
     @include wh(100%,100%);
     @include mp(0,0);
+}
+
+//var sets width and height of element to form a square
+@mixin sq($wh) {
+	@include wh($wh,$wh);
+}
+
+// first var sets border property
+// seconds var sets border radius property
+@mixin border($wsc,$radius) {
+	border: $wsc;
+	border-radius: $radius;
 }
 
 

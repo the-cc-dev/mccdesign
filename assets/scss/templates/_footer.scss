@@ -1,0 +1,30 @@
+.the-footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	bottom: 75px;
+	z-index: $footer-z;
+	.footer-item {
+		z-index: $footer-z;
+		font-size: 12px;
+	}
+	.footer-info {
+		display: inline-block;
+		width: 100%;
+		.footer-info-item {
+			padding: 0 3%;
+		}
+	}
+	@media (min-width: 345px) {bottom: 85px;}
+	@media (min-width: 375px) { bottom: 90px; }
+	@media (min-width: 400px) {bottom: 80px;}
+	@media (min-width: 460px) { bottom: 75px; }
+	@media (min-width: 500px) { bottom: 70px; }
+	@media (min-width: 568px) { bottom: 70px; }
+	@media (min-height: 425px) {
+		@media (min-width: 345px) { bottom: 65px; }
+		@media (min-width: 375px) { bottom: 65px; }
+	}
+	@import "footer-bottom";
+}

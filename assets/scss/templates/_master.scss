@@ -1,0 +1,139 @@
+body {
+	@include dptl(block,absolute,0,0);
+	@include whmp(100vw,100vh,0,0);
+  font-family: $serif-font;
+	background-color: $brand-dark;
+	color: $brand-light;
+	overflow: hidden;
+	
+	.body-container {
+		@include fill();
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		@import "header";
+		
+		.the-main {
+			@include whmp(100%,55%,0,0);
+			position: fixed;
+			top: $height1;
+			
+			z-index: $main-z;
+			.main-container {
+				@include fill();
+				overflow: hidden;
+				.page-header {
+					@include dp(inline-block,relative);
+					@include whmp(100%,25%,0,15px 25px 0);
+					.page-title {}
+				}
+				#theContent {
+					@include dp(inline-block,relative);
+					@include whmp(100%,75%,0,0 25px);
+					overflow: hidden;
+					.content-text {
+						width: 120%;
+						height: 110%;
+						padding-right: 19%;
+						z-index: $content-z;
+						overflow: scroll;
+					}
+				}
+			}
+			@media (min-width: 768px) { top: $height4;  }
+		}
+		
+		@import "footer";
+  }
+	@media (min-width: 375px) {
+		#bodyContainer #theMain #mainContainer {
+			.page-header {
+				padding: 10px;
+				height: 30%;
+				.page-title {}
+			}
+			#theContent {
+				.content-text {}
+			}
+		}
+	}
+}
+
+@media (min-height: 375px) {
+	body {
+		.body-container {
+			.the-main {
+				height: 60%;
+			}
+		}
+	}
+}
+@media (min-height: 425px) {
+	body {
+		.body-container {
+			.the-main {
+				height: 68%;
+				.main-container {
+					.page-header {
+						padding: 15px 25px 0px!important;
+						height: 20%!important;
+						.page-title {}
+					}
+					#theContent {
+						height: 80%;
+						.content-text {}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-height: 533px) {
+	body {
+		.body-container {
+			.the-main {
+				height: 73%;
+				#mainContainer {
+					.page-header {
+						height: 15%;
+						.page-title {}
+					}
+					#theContent {
+						.content-text {}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-height: 568px) {
+	body {
+		.body-container {
+			.the-main { height: 75%; }
+		}
+	}
+}
+@media (min-height: 640px) {
+	body {
+		.body-container {
+			.the-main { height: 75%!important; }
+		}
+	}
+}
+@media (min-height: 732px) {
+	body {
+		.body-container { 
+			.the-main { height: 80%; }
+		}
+	}
+}
+@media (min-height: 768px) {
+	body {
+		.body-container {
+			.the-main { height: 82%; }
+		}
+	}
+}
+
+

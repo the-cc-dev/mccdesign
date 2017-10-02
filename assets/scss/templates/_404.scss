@@ -1,0 +1,36 @@
+.error404, .search-no-results {
+	.body-container {
+		.the-header {
+			
+		}
+		.the-main {
+			.main-container {
+				@extend .container;
+				.page-header {}
+				.alert {
+					width: 90%;
+					margin-left: 5%;
+					background-color: transparent;
+					border-color: $brand-light;
+					color: $brand-light;
+				}
+				div.search-form-container {
+					form.search-form {
+						div.input-group {
+							input.search-field {}
+							div.input-btn-group {
+								button.btn.search-submit {
+									i.fa-search {}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.the-footer {}
+	}
+}
+.search-no-results .body-container .the-main .main-container .alert {
+	margin-top: 40px;
+}

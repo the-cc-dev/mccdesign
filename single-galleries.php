@@ -1,21 +1,43 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php while (have_posts()) : the_post(); 
+get_template_part('templates/header'); 
+$images = get_field('gallery_field'); 
+get_template_part('templates/page-header'); 
+get_template_part('templates/browse-drop'); 
+if($images): $slide_num = 1; ?>
 
-<?php get_template_part('templates/header'); ?>
+<div id="theContent">
+	<div class="single-gallery">
+		
+	<?php foreach( $images as $image): ?>
 
-<?php $images = get_field('gallery_field'); ?>
+		<div class="gallery-item" id="galItm<?php echo $slide_num; ?>">
+			<div class="gallery-item-content">
+				<span class="gallery-title"><?php echo $slide_num; ?></span>
+				<img 	class="gallery-img" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['caption']; ?>">
+				</div>
+		</div>
+		
+	<?php $slide_num = $slide_num + 1; 
+		endforeach; ?>
 
-<div <?php post_class(); ?>>
+	</div>
+</div>
 
-	<h1 class="page-title"><?php the_title(); ?></h1>
+<?php	 endif; 
 
-	<?php get_template_part('templates/browse-drop'); ?>
+get_template_part('templates/footer'); 
 
-	<?php get_template_part('templates/single-gallery'); ?>
-	
-
-  </div>
+endwhile; ?>
 
 
-<?php get_template_part('templates/footer'); ?>
 
-<?php endwhile; ?>
+
+
+
+
+
+
+
+
+
+

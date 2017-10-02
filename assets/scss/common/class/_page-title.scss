@@ -1,0 +1,13 @@
+.page-header {
+	@include mp(0,0);
+	border-width: 0;
+	.page-title {
+		@include dp(inline-block,relative);
+		width: 100%;
+		font-size: 30px;
+		text-align: center;
+		padding-bottom: 5px;
+		z-index: 1;
+		font-family: $serif-font;
+	}
+}

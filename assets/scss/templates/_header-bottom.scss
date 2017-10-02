@@ -1,0 +1,62 @@
+#headerBottom {
+	@include dptl(inline-block,fixed,$height1,0);
+	@include wh(100%,auto);
+	.header-img.left {@include tl(0,0);}
+	.header-img.right {@include tr(0,0);}
+	.header-img {
+		@include dp(inline-block,absolute);
+		@include sq($shelf);
+	}
+	@media (min-width: 375px) {
+		.header-img {@include sq($shelf2);}
+	}
+	@media (min-width: 425px) {
+		.header-img {@include sq($shelf3);}
+	}
+	@media (min-width: 500px) {
+		.header-img {@include sq($shelf4);}
+	}
+	@media (min-width: 768px) {
+		top: $height4;
+		.header-img {@include sq($shelf5);}
+	}
+}
+
+@media (min-height: 336px) {
+	#headerBottom {
+		.header-img {@include sq($shelf + 5px);}
+		@media (min-width: 375px) {
+			.header-img {@include sq($shelf2);}
+		}
+		@media (min-width: 425px) {
+			.header-img {@include sq($shelf3);}
+		}
+		@media (min-width: 500px) {
+			.header-img {@include sq($shelf4);}
+		}
+		@media (min-width: 768px) {
+			top: $height4;
+			.header-img {@include sq($shelf5);}
+		}
+	}
+}
+@media (min-height: 345px) {
+	#headerBottom {
+		.header-img {
+			@media (min-width: 375px) {}
+			@media (min-width: 425px) {}
+			@media (min-width: 500px) {}
+			@media (min-width: 768px) {}
+		}
+	}
+}
+@media (min-height: 375px) {
+	#headerBottom {
+		.header-img {
+			@media (min-width: 375px) {}
+			@media (min-width: 425px) {}
+			@media (min-width: 500px) {}
+			@media (min-width: 768px) {}
+		}
+	}
+}

@@ -34,7 +34,7 @@ $(document).ready(function(){
 			 slidesToScroll: 1,
 			 responsive: [
 				 {
-					 breakpoint: 767,
+					 breakpoint: 599,
 					 settings: "unslick"
 				 }]
 		 });

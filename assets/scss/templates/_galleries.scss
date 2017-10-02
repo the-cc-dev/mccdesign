@@ -1,11 +1,115 @@
-.single-galleries {
+.single {
 	.body-container {
 		.the-main {
 			.main-container {
-				.galleries {
-					.page-title {}
-					.browse-drop {}
+				.page-header {padding-top: 5px;}
+				.browse-drop {
+					position: relative;
+					z-index: $browse-z;
+					.drop-menu {
+						z-index: $browse-z;
+					}
+					@media (max-height: 359px) {display: none;}
+					@media (min-height: 375px) and (max-height: 424px) {margin-top: -1%;}
+					@media (min-height: 533px) {margin-top: 20px;}
 				}
+				#theContent {
+					@include dp(inline-block,relative);
+					@include whmp(100%,65%,10px 0 0,0 20%);
+					text-align: center;
+					overflow: hidden;
+					.single-gallery {
+						@include fill();
+						overflow: scroll;
+						max-height: 160px;
+						max-width: 250px;
+						.gallery-item {
+							@include fill();
+							.gallery-item-content {
+								.gallery-title {
+									@include whmp(100%,25%,0,0 0 5px);
+									@include dpbl(inline-block,absolute,1%,0);
+
+									text-align:center;
+									z-index: $gal-title-z;
+									color: $brand-light;
+									font-size: 20px;
+									background-color: $img-ovr;
+								}
+								.gallery-img {
+									@include fill();
+									border-radius: $border-radius;
+									position: absolute;
+									z-index: $gal-img-z;
+								}
+							}
+						}
+						
+					}
+					@media (min-width: 425px) {
+						padding: 0 15%;
+						.single-gallery {
+							max-width: none;
+							.gallery-item {
+								width: 45%;
+								float: left;
+								margin: 0 2.5% 2.5%;
+							}
+						}
+					}
+					@media (min-width: 600px) {
+						padding: 0;
+						margin-top: 17.5px;
+						.single-gallery {
+							
+							.gallery-item {
+								float: none;
+								width: 25%;
+							}
+						}
+					}
+					@media (min-width: 768px) {
+						padding: 0 3%;
+						.single-gallery {
+							.gallery-item {
+								width: 24%;
+								margin: 0 3% 3%;
+							}
+						}
+					}
+					@media (min-width: 950px) {
+						padding: 0 5%;
+						.single-gallery {
+							.gallery-item {
+								width: 20%;
+								margin: 0 5% 5%;
+							}
+						}
+					}
+					@media (min-height: 425px) {
+						.single-gallery {
+							max-height: none;
+							height: 105%;
+							padding-bottom: 5%;
+							width: 105%;
+							padding-right: 5%;
+							.gallery-item {
+								max-height: 160px;
+							}
+						}
+					}
+					@media (min-height: 768) and (min-width: 1024) {
+						.single-gallery {
+							@include fill();
+						}
+					}
+				}
+			}
+		}
+		@media (min-height: 360px) and (max-width: 599px) {
+			.the-main {
+				height: 60%;
+				.main-container #theContent { padding: 0 10%; }
 			}
 		}
 	}

@@ -1,0 +1,26 @@
+div.search-form-container {
+	height: $height1;
+	padding: 5px 0;
+	form.search-form {
+		div.input-group {
+			input.search-field {
+				height: $height2;
+			}
+			div.input-group-btn {
+				.search-submit {
+					height: $height2;
+					border: 1px solid $brand-light;
+					background-color: $brand-dark;
+					.fa-search {}
+				}
+				.search-submit:hover {
+					background-color:$brand-light;
+					border-color: $brand-dark;
+					.fa-search {
+						color: $brand-dark;
+					}
+				}
+			}
+		}
+	}
+}

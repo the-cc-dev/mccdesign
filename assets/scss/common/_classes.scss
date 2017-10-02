@@ -1,7 +1,5 @@
-.sans { font-family: $sans-font; }
-.serif { font-family: $serif-font; }
-
-@import "classes/search-form";
-@import "classes/drop";
-@import "classes/page-title";
-@import "classes/slider";
+@import "class/fonts";
+@import "class/page-title";
+@import "class/gallery-covers";
+@import "class/browse-drop";
+@import "class/search-form";

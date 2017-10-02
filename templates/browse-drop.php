@@ -1,4 +1,5 @@
-<div class="browse-drop drop">
+<div id="browseDrop" class="browse-drop drop">
+	
 	<button class="drop-toggle btn" type="button">
 		<span class="drop-toggle-text">Browse</span>
 		<i class="drop-arrow drop-up fa fa-chevron-up"></i>
@@ -16,6 +17,8 @@
 				</li>
 
 			<?php endwhile; ?>
-		<?php endif; ?>
+		<?php endif; 
+		wp_reset_postdata(); ?>
 	</ul>
+	
 </div>

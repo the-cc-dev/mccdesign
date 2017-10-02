@@ -1,1 +1,118 @@
-.contact {}
+.contact {
+	.body-container {
+		.the-main {
+			.main-container {
+				.page-header {}
+				.contact-us {
+					width: 100%;
+						margin-top: 25px;
+					padding-right: 15px;
+					.contact-item {
+						display: inline-block;
+						width: 50%;
+						float: left;
+						text-align: center;
+						.contact-link {
+							@include fill();
+							.contact-icon, .contact-text, .the-info {
+								@include dp(inline-block,relative);
+								color: $brand-light;
+							}
+							.contact-icon { font-size: 20px; }
+							.contact-text { font-size: 17px; }
+							.the-info {
+								font-size: 15px;
+								margin-top: 10px;
+								width: 100%;
+							}
+							@media (min-width: 425px) {
+								.contact-icon { font-size: 23px; }
+								.contact-text { font-size: 20px; }
+								.the-info { font-size: 18px; }
+							}
+						}
+					}
+				}
+				#theContent {
+					display: none;
+					text-align: center;
+				}
+				@media (min-height: 425px) {
+					.contact-us {
+						position: absolute;
+						bottom: 20px;
+						@include mp(0,10px 0);
+						.contact-item {
+							width: 100%;
+							height: 80px;
+						}
+					}
+					@media (min-width: 425px) {
+						.contact-us {
+							bottom: 0;
+							.contact-item {margin: 10px 0;}
+						}
+					}
+					@media (min-width: 533px) {
+						.contact-us {
+							bottom: 50px;
+							.contact-item {
+								width: 50%;
+							}
+						}
+					}
+				}
+				@media (min-height: 480px) {
+					.contact-us {
+						position: absolute;
+						bottom: 20px;
+						@media (min-width: 768px) {
+							bottom: 100px;
+							.contact-item {
+								.contact-link {
+									.contact-icon { font-size: 32px; }
+									.contact-text { font-size: 26px; }
+									.the-info { font-size: 24px; }
+								}
+							}
+						}
+					}
+				}
+				@media (min-height: 768px) {
+					
+					#theContent {
+						padding: 0;
+						.contact-drop {
+							margin-top: -10px;
+							.drop-toggle {
+								.drop-toggle-text {}
+							}
+							.drop-menu {
+								background-color: $brand-dark;
+								.drop-item {
+									@include fill();
+									.wpcf7 {
+										@include fill();
+										.wpcf7-form {
+											@include fill();
+											p {
+												label {
+													font-size: 12px;
+													text-align: left;
+													.wpcf7-form-control-wrap {
+														
+														.wpcf7-form-control {width: 100%;}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

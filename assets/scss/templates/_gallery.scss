@@ -2,8 +2,103 @@
 	.body-container {
 		.the-main {
 			.main-container {
-				.page-title {}
-				.gallery-covers {}
+				.page-header {}
+				.browse-drop {
+					@media (max-height: 424px) {display: none;}
+				}
+				.gallery-covers {
+					@include tl(30%,10%);
+					@include wh(80%,40%);
+					text-align: center;
+					.responsive-slider {
+						max-height: 225px;
+					}
+					@media (min-width: 345px) {
+						height: 35%;
+						width: 70%;
+						left: 15%;
+					}
+					
+					@media (max-height: 374px) and (max-width: 599px) {
+						.responsive-slider { 
+							max-width: 250px; 
+						}
+						@media (min-width: 568px) { 
+							height: 40%; 
+						}
+					}
+					@media (min-width: 600px) {
+						border: none;
+						.responsive-slider {
+							@include sq(auto);
+							border: none;
+							text-align: center;
+						}
+					}
+					@media (min-width: 768px) {
+						.responsive-slider {
+							.gallery-item {
+								@include sq($gimg2);
+								.gallery-link {
+									.gallery-title {}
+									.gallery-img {
+										@include sq($gimg2);
+									}
+								}
+							}
+						}
+					}
+					@media (min-width: 900px) {
+						.responsive-slider {
+							padding: 5px 0;
+							.gallery-item {
+								@include sq($gimg3);
+								.gallery-link {
+									.gallery-title {}
+									.gallery-img {
+										@include sq($gimg3);
+									}
+								}
+							}
+						}
+					}
+				}
+				@media (min-height: 425px) {
+					.browse-drop { margin-top: 5px; }
+					.gallery-covers {
+						@include tl(35%,10%);
+						@include wh(80%,45%);
+						@media (max-width: 599px){
+							.responsive-slider { max-width: 300px; }
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: 600px) {
+		.body-container {
+			.the-main {
+				.main-container {
+					.gallery-covers {
+						width: 100%;
+						left: 0;
+							@media (min-height: 768px){
+								top: 30%;
+								height: 50%;
+							.responsive-slider {
+								.gallery-item {
+									margin: 25px;
+									@include sq($gimg3);
+									.gallery-link {
+										.gallery-title {font-size: 20px;}
+										.gallery-img { @include sq($gimg3); }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

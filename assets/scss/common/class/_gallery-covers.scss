@@ -1,0 +1,77 @@
+.gallery-covers {
+		@include dp(inline-block,fixed);
+		border-radius: $border-radius;
+		overflow: hidden;
+		text-align: center;
+		.responsive-slider {
+			@include fill();
+			border-radius: $border-radius;
+			border: 1px solid $brand-light;
+			.slick-list {
+				@include fill();
+				height: 100%!important;
+				border-radius: $border-radius;
+				.slick-track {
+					@include fill();
+					border-radius: $border-radius;
+					.slick-slide {
+						@include fill();
+						border-radius: $border-radius;
+						.gallery-link {
+							border-radius: $border-radius;
+							.gallery-title {
+								@include whmp(100%,25%,0,0 0 5px);
+								@include dpbl(inline-block,absolute,1%,0);
+
+								text-align:center;
+								z-index: $gal-title-z;
+								color: $brand-light;
+								font-size: 20px;
+								background-color: $img-ovr;
+							}
+							.gallery-img {
+								@include fill();
+								border-radius: $border-radius;
+								position: absolute;
+								z-index: $gal-img-z;
+							}
+						}
+					}
+				}
+			}
+		}					
+	
+	@media (min-width: 600px) {
+			.responsive-slider {
+				//padding: 20px 0px;
+				text-align: center;
+				.gallery-item {
+					margin: 5px;
+					@include dptl(inline-block,relative,0,0);
+					@include sq($gimg);
+					float: left;
+					.gallery-link {
+						@include fill();
+						.gallery-title {
+							@include dptl(inline-block,absolute,0,0);
+							margin-top: 30px;
+							width: 100%;
+							text-align: center;
+							z-index: $gal-title-z;
+							color: $brand-light;
+							background-color: rgba(0,0,0,.7);
+							font-size: 15px;
+						}
+						.gallery-img {
+							@include dptl(inline-block,absolute,0,0);
+							@include sq($gimg);
+							@include border(1px solid $brand-light,$border-radius);
+							border-radius: $border-radius;
+							z-index: $gal-img-z;
+						}
+					}
+				}
+			}
+		}
+	
+	}

@@ -26,7 +26,6 @@ var path        = manifest.paths,
          fonts: path.source + "fonts/",
         images: path.source + "images/",
             js: path.source + "js/",
-           jsx: path.source + "jsx/**/*.jsx",
           scss: path.source + "scss/"
     },
     mainScss    = assets.scss + "main.scss",

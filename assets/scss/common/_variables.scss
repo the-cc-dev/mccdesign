@@ -1,15 +1,63 @@
-@import "vars/fonts";
-@import "vars/colors";
-@import "vars/breakpoints";
-@import "vars/z-indexes";
-@import "vars/dimensions";
+/* FONTS */
+$font-path: "../fonts";
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans|Headland+One|Stardos+Stencil');
+$brand-font: 'Stardos Stencil', sans-serif;
+$sans-font: 'Encode Sans', sans-serif;
+$serif-font: 'Headland One', serif;
 
+/* COLORS */
+$brand-light: white;
+$brand-mid: #262626;
+$brand-dark: black;
+$brand-other: transparent;
+$img-ovr: rgba(0,0,0,.6);
 
+$border-radius: 5px;
 
+$height1: 40px;
+$height2: ($height1 - 10px);
+$height3: ($height1 * 4);
+$height4: ($height1 + 10px);
+$height5: ($height2 - 10px);
 
-$border-radii: 5px;
-$tshad1: -1px 1px $tshad1-color;
-$tshad2: -1px -1px 1px $tshad2-color;
+$header-z: 100;
+$main-z: 70;
+$title-z: 80;
+$content-z: 80;
+$browse-z: 75; 
+$gal-title-z: 65;
+$gal-img-z: 60;
+$footer-z: 50;
 
+$shelf: 65px;
+$shelf2: $shelf + 20px;
+$shelf3: $shelf2 + 10px;
+$shelf4: $shelf3 + 10px;
+$shelf5: $shelf4 + 10px;
 
+$gimg: 90px;
+$gimg2: $gimg + 10px;
+$gimg3: $gimg2 + 30px;
 
+/* FOOTER GATES */
+// height:width ratio of gate image
+$footer-gate-ratio: .90798;
+// width = 100% of device width
+$footer-width: 100vw;
+//default # of gates
+$footerg: 3.98;
+$footerg2: $footerg + 1;
+$footerg3: $footerg2 + 1;
+$footerg4: $footerg3 + 1;
+$footerg5: $footerg4 + 1;
+$footerg6: $footerg5 + 1; 
+$footerg7: $footerg6 + 1;
+$footerg8: $footerg7 + 1;
+$footerg9: $footerg8 + 1;
+$footerg10: $footerg9 + 1;
+$footerg11: $footerg10 + .95;
+$footerg12: $footerg11 + 2;
+$footerg13: $footerg12 + 4.95;
+$footerg14: $footerg13 + 4.95;
+$footerg15: $footerg14 + 5.95;
+$footerg16: $footerg15 + 4.95;

@@ -1,9 +1,29 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php 
 
-<?php get_template_part('templates/header'); ?>
+while (have_posts()) : the_post();
 
-<?php get_template_part('templates/content-page'); ?>
+	get_template_part('templates/header');
+	get_template_part('templates/page-header');
 
-<?php get_template_part('templates/footer'); ?>
+	if( is_page('contact') ):
 
-<?php endwhile; ?>
+		get_template_part('templates/contact-us');
+
+	endif;
+
+	if( is_page( array( 'home', 'gallery' ) ) ): 
+
+		get_template_part('templates/browse-drop'); 
+		get_template_part('templates/gallery-covers');
+
+	elseif( is_page( array( 'about', 'contact' ) ) ): 
+
+		get_template_part('templates/content'); 
+
+	endif;
+
+	get_template_part('templates/footer'); 
+
+endwhile; 
+
+?>

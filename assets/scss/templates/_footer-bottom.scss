@@ -1,0 +1,101 @@
+#footerBottom {
+	@include dpbl(inline-block,fixed,0,0);
+	@include footerBottomGates($footerg);
+	width: 100%;
+	background-repeat: repeat-x;
+	background-size: contain;
+	
+	@media (min-width: 400px) {
+		@include footerBottomGates($footerg2);
+	}
+	@media (min-width: 460px) {
+		@include footerBottomGates($footerg3);
+	}
+	@media (min-width: 500px) {
+		@include footerBottomGates($footerg4);
+	}
+	@media (min-width: 568px) {
+		@include footerBottomGates($footerg5);
+	}
+	@media (min-width: 640px) {
+		@include footerBottomGates($footerg6);
+	}
+	@media (min-width: 732px) {
+		@include footerBottomGates($footerg7);
+	}
+	@media (min-width: 768px) {
+		@include footerBottomGates($footerg8);
+	}
+	@media (min-width: 800px) {
+		@include footerBottomGates($footerg9);
+	}
+	@media (min-width: 950px) {
+		@include footerBottomGates($footerg10);
+	}
+	@media (min-width: 1024px) {
+		@include footerBottomGates($footerg11);
+	}
+	@media (min-width: 1100px) {
+		@include footerBottomGates($footerg12);
+	}
+	@media (min-width: 1280px) {
+		@include footerBottomGates($footerg13);
+	}
+	@media (min-width: 1600px) {
+		@include footerBottomGates($footerg14);
+	}
+	@media (min-width: 2000px) {
+		@include footerBottomGates($footerg15);
+	}
+	@media (min-width: 2560px) {
+		@include footerBottomGates($footerg16);
+	}
+	
+	@media (min-height: 425px) {
+		@media (min-width: 336px) {
+			@include footerBottomGates($footerg2);
+		}
+		@media (min-width: 375px) {
+			@include footerBottomGates($footerg3);
+		}
+		@media (min-width: 425px) {
+			@include footerBottomGates($footerg4 - .1);
+		}
+		@media (min-width: 500px) {
+			@include footerBottomGates($footerg5 - .07);
+		}
+		@media (min-width: 580px) {
+			@include footerBottomGates($footerg6);
+		}
+		@media (min-width: 650px) {
+			@include footerBottomGates($footerg7 - .1);
+		}
+		@media (min-width: 768px) {
+			@include footerBottomGates($footerg8 - .1);
+		}
+		@media (min-width: 800px) {
+			@include footerBottomGates($footerg9 - .1);
+		}
+		@media (min-width: 875px) {
+			@include footerBottomGates($footerg10 - .1);
+		}
+		@media (min-width: 900px) {
+			@include footerBottomGates($footerg11);
+		}
+		@media (min-width: 1024px) {
+			@include footerBottomGates($footerg12);
+		}
+		@media (min-width: 1100px) {
+			@include footerBottomGates($footerg13);
+		}
+		@media (min-width: 1440px) {
+			@include footerBottomGates($footerg14);
+		}
+		@media (min-width: 1800px) {
+			@include footerBottomGates($footerg15 + 10);
+		}
+	}
+	@media (min-height: 480px) {
+		
+	}
+}
